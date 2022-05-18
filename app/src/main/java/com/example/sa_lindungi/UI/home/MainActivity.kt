@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
     //test 21232324244
     //tesadjsjdasodnaspdpaosd
 
+    //coba test 3
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
