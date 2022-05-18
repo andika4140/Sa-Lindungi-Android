@@ -15,12 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    //test push github
-
-    //test 21232324244
-    //tesadjsjdasodnaspdpaosd
-
-    //coba test 3
+    //test missing
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
