@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.home.MainActivity">
+
+    <TextView
+        android:id="@+id/sa_lindungi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/sa_lindungi"
+        android:textAppearance="@style/sa_lindungi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_baseline_settings_24"
+        android:tint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/button_kenali_satwa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="176dp"
+        android:src="@drawable/scan_hewan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/button_donasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:src="@drawable/donasi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button_kenali_satwa"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button_kenali_satwa"
+        app:layout_constraintTop_toBottomOf="@+id/button_kenali_satwa"
+        app:layout_constraintVertical_bias="0.033" />
+
+    <!--    <View-->
+<!--        android:id="@+id/rectangle_9"-->
+<!--        android:layout_width="410dp"-->
+<!--        android:layout_height="84dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginTop="104dp"-->
+<!--        android:background="@drawable/rectangle_9"-->
+<!--        android:elevation="4dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

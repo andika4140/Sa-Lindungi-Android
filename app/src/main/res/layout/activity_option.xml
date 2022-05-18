@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.scanAnimal.OptionActivity">
+
+    <TextView
+        android:id="@+id/kenali_satw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="36dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/kenali_satw"
+        android:textAppearance="@style/kenali_satwa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:tint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pilih_sumbe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="48dp"
+        android:gravity="top"
+        android:text="@string/pilih_sumbe"
+        android:textAppearance="@style/pilih_sumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kenali_satw" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/camera_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:src="@drawable/camera_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pilih_sumbe" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/gallery_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:src="@drawable/gallery_button"
+        app:layout_constraintEnd_toEndOf="@+id/camera_button"
+        app:layout_constraintStart_toStartOf="@+id/camera_button"
+        app:layout_constraintTop_toBottomOf="@+id/camera_button" />
+    
+</androidx.constraintlayout.widget.ConstraintLayout>
