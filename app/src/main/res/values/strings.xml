@@ -4,4 +4,9 @@
     <string name="kenali_satw">Kenali Satwa</string>
     <string name="pilih_sumbe">Pilih sumber gambarnya dulu yuk!</string>
     <string name="sudah_yakin">Sudah yakin dengan foto kamu?</string>
+    <string name="next">lanjut</string>
+    <string name="retry">ulang</string>
+    <string name="nama_satwa">Nama Satwa</string>
+    <string name="nama_satwa_description">Nama satwa ini Komodo!</string>
+    <string name="home">home</string>
 </resources>
