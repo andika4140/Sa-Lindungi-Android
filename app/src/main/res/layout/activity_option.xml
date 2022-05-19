@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_app"
     tools:context=".UI.scanAnimal.OptionActivity">
 
     <TextView
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="16dp"
         android:gravity="center_horizontal|top"
         android:text="@string/kenali_satw"
         android:textAppearance="@style/kenali_satwa"
@@ -26,9 +27,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="19dp"
         android:src="@drawable/ic_baseline_arrow_back_24"
-        android:tint="@color/black"
+        android:tint="@color/dimmed_white"
+        app:layout_constraintEnd_toStartOf="@+id/kenali_satw"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,5 +70,19 @@
         app:layout_constraintEnd_toEndOf="@+id/camera_button"
         app:layout_constraintStart_toStartOf="@+id/camera_button"
         app:layout_constraintTop_toBottomOf="@+id/camera_button" />
-    
+
+    <ImageView
+        android:id="@+id/previewImageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kenali_satw"
+        app:layout_constraintVertical_bias="0.674"
+        app:srcCompat="@drawable/ic_place_holder" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
