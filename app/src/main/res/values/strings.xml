@@ -2,6 +2,13 @@
     <string name="app_name">Sa-Lindungi</string>
     <string name="sa_lindungi">Sa-Lindungi</string>
     <string name="kenali_satw">Kenali Satwa</string>
+
+    <string name="donasi">Donasi</string>
+    <string name="donasi_comp">Donasi Company</string>
+
+    <string name="image_onboard">Image Onboarding</string>
+    <string name="desc_onboard">Description Onboarding</string>
+
     <string name="pilih_sumbe">Pilih sumber gambarnya dulu yuk!</string>
     <string name="sudah_yakin">Sudah yakin dengan foto kamu?</string>
     <string name="next">lanjut</string>

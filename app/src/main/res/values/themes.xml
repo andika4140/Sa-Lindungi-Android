@@ -50,6 +50,18 @@
         </item>
     </style>
 
+    <style name="donasi">
+        <item name="android:textSize">
+            36sp
+        </item>
+        <item name="android:letterSpacing">
+            0.12
+        </item>
+        <item name="android:textColor">
+            @color/dimmed_white
+        </item>
+    </style>
+
     <style name="pilih_sumber">
         <item name="android:textSize">
             16sp

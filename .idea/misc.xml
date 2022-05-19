@@ -3,17 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/Sa-Lindungi-Android/app/src/main/res/layout/activity_camera.xml" value="0.22447916666666667" />
+        <entry key="..\:/AndroidStudioProjects/Sa-Lindungi-Android/app/src/main/res/layout/activity_donate.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/Sa-Lindungi-Android/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
+        <entry key="..\:/AndroidStudioProjects/Sa-Lindungi-Android/app/src/main/res/layout/activity_onboard.xml" value="0.18" />
+        <entry key="..\:/AndroidStudioProjects/Sa-Lindungi-Android/app/src/main/res/layout/activity_option.xml" value="0.22447916666666667" />
+        <entry key="..\:/AndroidStudioProjects/Sa-Lindungi-Android/app/src/main/res/layout/activity_preview.xml" value="0.22" />
+        <entry key="..\:/AndroidStudioProjects/Sa-Lindungi-Android/app/src/main/res/layout/activity_result.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/SaLindungi/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.2115" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/SaLindungi/app/src/main/res/drawable/ic_capture.xml" value="0.246" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/SaLindungi/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2115" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/SaLindungi/app/src/main/res/drawable/ic_place_holder.xml" value="0.246" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/SaLindungi/app/src/main/res/drawable/ic_switch_camera.xml" value="0.246" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/SaLindungi/app/src/main/res/drawable/rectangle_9.xml" value="0.2115" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/SaLindungi/app/src/main/res/layout/activity_camera.xml" value="0.264" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/SaLindungi/app/src/main/res/layout/activity_camera.xml" value="0.25" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/SaLindungi/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/SaLindungi/app/src/main/res/layout/activity_option.xml" value="0.264" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/SaLindungi/app/src/main/res/layout/activity_preview.xml" value="0.264" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/SaLindungi/app/src/main/res/layout/activity_result.xml" value="0.2" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/SaLindungi/app/src/main/res/layout/activity_preview.xml" value="0.25" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/SaLindungi/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2115" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/SaLindungi/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2115" />
       </map>
