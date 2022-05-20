@@ -35,7 +35,7 @@ class CameraActivity : AppCompatActivity() {
 
         cameraExecutor = Executors.newSingleThreadExecutor()
 
-        binding.captureImage.setOnClickListener { takePhoto() }
+        binding.btnCapture.setOnClickListener { takePhoto() }
         binding.switchCamera.setOnClickListener { startCamera() }
         binding.switchCamera.setOnClickListener {
             cameraSelector =
