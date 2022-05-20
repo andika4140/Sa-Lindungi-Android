@@ -6,9 +6,11 @@
         <entry key="..\:/Sa-Lindungi-Android/app/src/main/res/drawable/ic_capture.xml" value="0.2905" />
         <entry key="..\:/Sa-Lindungi-Android/app/src/main/res/layout/activity_camera.xml" value="0.358695652173913" />
         <entry key="..\:/Sa-Lindungi-Android/app/src/main/res/layout/activity_donate.xml" value="0.33" />
-        <entry key="..\:/Sa-Lindungi-Android/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Sa-Lindungi-Android/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Sa-Lindungi-Android/app/src/main/res/layout/activity_onboard.xml" value="0.358695652173913" />
-        <entry key="..\:/Sa-Lindungi-Android/app/src/main/res/layout/activity_option.xml" value="0.358695652173913" />
+        <entry key="..\:/Sa-Lindungi-Android/app/src/main/res/layout/activity_option.xml" value="0.33" />
+        <entry key="..\:/Sa-Lindungi-Android/app/src/main/res/layout/activity_preview.xml" value="0.36666666666666664" />
+        <entry key="..\:/Sa-Lindungi-Android/app/src/main/res/layout/activity_result.xml" value="0.36666666666666664" />
         <entry key="..\:/Sa-Lindungi-Android/app/src/main/res/layout/item_donate.xml" value="0.358695652173913" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/SaLindungi/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.2115" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/SaLindungi/app/src/main/res/drawable/ic_capture.xml" value="0.246" />
