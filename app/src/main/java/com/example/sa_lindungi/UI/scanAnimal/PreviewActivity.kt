@@ -1,11 +1,9 @@
 package com.example.sa_lindungi.UI.scanAnimal
 
-import android.Manifest
 import android.content.Intent
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.sa_lindungi.R
 import com.example.sa_lindungi.databinding.ActivityPreviewBinding
 import java.io.File
 
