@@ -7,6 +7,19 @@
     android:background="@drawable/bg_app"
     tools:context=".UI.home.MainActivity">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/my_nav" />
+
     <TextView
         android:id="@+id/sa_lindungi"
         android:layout_width="wrap_content"
@@ -53,7 +66,7 @@
         app:layout_constraintStart_toStartOf="@+id/button_kenali_satwa"
         app:layout_constraintTop_toBottomOf="@+id/button_kenali_satwa"
         app:layout_constraintVertical_bias="0.033"
-        app:srcCompat="@drawable/donasi"/>
+        app:srcCompat="@drawable/donasi" />
 
     <!--    <View-->
     <!--        android:id="@+id/rectangle_9"-->

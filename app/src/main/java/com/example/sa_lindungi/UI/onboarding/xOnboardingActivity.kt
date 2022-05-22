@@ -7,7 +7,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sa_lindungi.R
 
-class OnboardingActivity : AppCompatActivity() {
+class xOnboardingActivity : AppCompatActivity() {
     private lateinit var onboard: ListOnboardItem
     private lateinit var binding: ActivityDetailOnboardBinding
 

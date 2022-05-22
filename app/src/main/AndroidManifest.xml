@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SaLindungi">
         <activity
+            android:name=".UI.onboarding.OnboardingActivity"
+            android:exported="false" />
+        <activity
             android:name=".UI.scanAnimal.ResultActivity"
             android:exported="false" />
         <activity
