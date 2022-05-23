@@ -9,16 +9,22 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.sa_lindungi.R
+import com.example.sa_lindungi.databinding.FragmentSecondScreenBinding
+import com.example.sa_lindungi.databinding.FragmentThirdScreenBinding
+import kotlinx.android.synthetic.main.fragment_third_screen.view.*
 
 class ThirdScreen : Fragment() {
+    private lateinit var binding : FragmentThirdScreenBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        binding = FragmentThirdScreenBinding.inflate(inflater, container, false)
+
         val view = inflater.inflate(R.layout.fragment_third_screen, container, false)
 
-        view.finish.SetOnClickListener{
+        view.finish.setOnClickListener{
             findNavController().navigate(R.id.action_viewPagerFragment_to_homeFragment)
             onboardingFinished()
         }

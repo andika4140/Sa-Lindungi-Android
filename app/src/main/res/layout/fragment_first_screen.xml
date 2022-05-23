@@ -29,7 +29,6 @@
 
     <TextView
         android:id="@+id/description"
-        :gravity="center"
         android:layout_width="168dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"

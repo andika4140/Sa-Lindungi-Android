@@ -22,10 +22,10 @@ class MainActivity : AppCompatActivity() {
 
         setupView()
 
-        binding.buttonKenaliSatwa.setOnClickListener {
-            val intentToOption = Intent(this@MainActivity, OptionActivity::class.java)
-            startActivity(intentToOption)
-        }
+//        binding.buttonKenaliSatwa.setOnClickListener {
+//            val intentToOption = Intent(this@MainActivity, OptionActivity::class.java)
+//            startActivity(intentToOption)
+//        }
 
     }
 
