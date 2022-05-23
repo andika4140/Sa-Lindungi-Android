@@ -21,7 +21,7 @@ class FirstScreen : Fragment() {
 
         val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)
 
-        view.button_next.setOnClickListener{
+        view.button_next1.setOnClickListener{
             viewPager?.currentItem = 1
         }
 

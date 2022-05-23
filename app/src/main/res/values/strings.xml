@@ -7,8 +7,12 @@
     <string name="donasi_comp">Donasi Company</string>
 
     <string name="image_onboarding">Image Onboarding</string>
-    <string name="title_onboarding">Title Onboarding</string>
-    <string name="desc_onboarding">Description Onboarding</string>
+    <string name="title_onboarding1">Selamat Datang di Sa-Lindungi!</string>
+    <string name="desc_onboarding1">Sa-Lindungi adalah aplikasi berbasis database yang dapat memberi pengetahuan tentang hewan yang dilindungi!</string>
+    <string name="title_onboarding2">Nyalakan Kamera Kamu!</string>
+    <string name="desc_onboarding2">Dengan Sa-Lindungi, kamu cukup menyalakan atau mengakses galeri kamu untuk dideteksi. Kirimkan foto binatang yang ingin kamu ketahui, ya!</string>
+    <string name="title_onboarding3">Memberikan Data yang Akurat</string>
+    <string name="desc_onboarding3">Aplikasi Sa-Lindungi dilengkapi dengan data yang tepat serta akurat untuk mendeteksi informasi tentang hewan yang dilindungi di Indonesia.</string>
 
     <string name="pilih_sumbe">Pilih sumber gambarnya dulu yuk!</string>
     <string name="sudah_yakin">Sudah yakin dengan foto kamu?</string>
