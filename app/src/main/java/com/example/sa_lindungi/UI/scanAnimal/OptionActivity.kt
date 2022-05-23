@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
+import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -22,6 +23,8 @@ import java.io.*
 class OptionActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityOptionBinding
+
+    private var getFile: File? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +48,25 @@ class OptionActivity : AppCompatActivity() {
         }
 
         binding.cameraButton.setOnClickListener { startCameraX() }
+        binding.galleryButton.setOnClickListener { startGallery() }
+        binding.buttonNext.setOnClickListener { toResult() }
+    }
+
+    private fun toResult() {
+        if (getFile != null) {
+            val intentToResult = Intent(this, ResultActivity::class.java)
+            startActivity(intentToResult)
+        } else {
+            Toast.makeText(this, "Silahkan masukkan berkas gambar terlebih dahulu", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun startGallery() {
+        val intent = Intent()
+        intent.action = Intent.ACTION_GET_CONTENT
+        intent.type = "image/*"
+        val chooser = Intent.createChooser(intent, "Choose a Picture")
+        launcherIntentGallery.launch(chooser)
     }
 
     override fun onRequestPermissionsResult(
@@ -94,12 +116,27 @@ class OptionActivity : AppCompatActivity() {
             val myFile = it.data?.getSerializableExtra("picture") as File
             val isBackCamera = it.data?.getBooleanExtra("isBackCamera", true) as Boolean
 
+            getFile = myFile
+
             val result = rotateBitmap(
                 BitmapFactory.decodeFile(myFile.path),
                 isBackCamera
             )
 
             binding.previewImageView.setImageBitmap(result)
+        }
+    }
+
+    private val launcherIntentGallery = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == RESULT_OK) {
+            val selectedImg: Uri = result.data?.data as Uri
+            val myFile = uriToFile(selectedImg, this@OptionActivity)
+
+            getFile = myFile
+
+            binding.previewImageView.setImageURI(selectedImg)
         }
     }
 

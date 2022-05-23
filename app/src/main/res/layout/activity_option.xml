@@ -27,8 +27,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="19dp"
+        android:layout_marginEnd="16dp"
         android:src="@drawable/ic_baseline_arrow_back_24"
         android:tint="@color/dimmed_white"
         app:layout_constraintEnd_toStartOf="@+id/kenali_satw"
@@ -54,35 +54,47 @@
         android:id="@+id/camera_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:src="@drawable/camera_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pilih_sumbe" />
+        app:layout_constraintTop_toBottomOf="@+id/previewImageView"
+        app:srcCompat="@drawable/camera_button_2" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/gallery_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:src="@drawable/gallery_button"
-        app:layout_constraintEnd_toEndOf="@+id/camera_button"
-        app:layout_constraintStart_toStartOf="@+id/camera_button"
-        app:layout_constraintTop_toBottomOf="@+id/camera_button" />
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/gallery_button_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/previewImageView" />
 
     <ImageView
         android:id="@+id/previewImageView"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="260dp"
+        android:layout_height="285dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kenali_satw"
-        app:layout_constraintVertical_bias="0.674"
-        app:srcCompat="@drawable/ic_place_holder" />
+        app:layout_constraintTop_toBottomOf="@+id/pilih_sumbe"
+        app:layout_constraintVertical_bias="0.064"
+        app:srcCompat="@drawable/replacement_image_preview" />
+
+    <Button
+        android:id="@+id/button_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="@color/main_color"
+        android:text="@string/prediction"
+        android:textColor="@color/dimmed_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

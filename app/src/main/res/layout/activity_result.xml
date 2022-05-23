@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/komodo"
         app:layout_constraintVertical_bias="0.145"
-        app:srcCompat="@drawable/ic_place_holder" />
+        app:srcCompat="@drawable/komodo_image_example" />
 
     <TextView
         android:id="@+id/kenali_satw"
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="48dp"
         android:gravity="center_horizontal|top"
         android:text="@string/nama_satwa"
         android:textAppearance="@style/nama_satwa"
@@ -65,11 +65,11 @@
         app:layout_constraintStart_toStartOf="@+id/previewImageView2"
         app:layout_constraintTop_toBottomOf="@+id/previewImageView2" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/button_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="60dp"
         android:backgroundTint="@color/main_color"
         android:text="@string/home"
