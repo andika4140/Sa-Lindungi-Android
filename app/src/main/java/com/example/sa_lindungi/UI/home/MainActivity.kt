@@ -1,14 +1,10 @@
 package com.example.sa_lindungi.UI.home
 
-import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.WindowInsets
 import android.view.WindowManager
-import com.example.sa_lindungi.R
-import com.example.sa_lindungi.UI.scanAnimal.OptionActivity
 import com.example.sa_lindungi.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
