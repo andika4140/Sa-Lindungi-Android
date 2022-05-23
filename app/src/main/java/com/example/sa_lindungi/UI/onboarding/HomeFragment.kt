@@ -12,14 +12,11 @@ import com.example.sa_lindungi.databinding.FragmentHomeBinding
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
 class HomeFragment : Fragment() {
-    private lateinit var binding : FragmentHomeBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
-
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
         view.button_kenali_satwa.setOnClickListener {
