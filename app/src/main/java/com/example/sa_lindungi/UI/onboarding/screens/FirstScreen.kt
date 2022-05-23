@@ -12,14 +12,11 @@ import com.example.sa_lindungi.databinding.FragmentFirstScreenBinding
 import kotlinx.android.synthetic.main.fragment_first_screen.view.*
 
 class FirstScreen : Fragment() {
-    private lateinit var binding : FragmentFirstScreenBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentFirstScreenBinding.inflate(inflater, container, false)
-
         val view = inflater.inflate(R.layout.fragment_first_screen, container, false)
 
         val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)
