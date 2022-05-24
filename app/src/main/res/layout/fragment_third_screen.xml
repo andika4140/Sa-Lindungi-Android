@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dimmed_white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".UI.onboarding.screens.ThirdScreen">
 
@@ -14,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/onboarding_s3" />
+        app:srcCompat="@drawable/onboarding_s3" />
 
     <TextView
         android:id="@+id/title3"
@@ -29,12 +30,12 @@
 
     <TextView
         android:id="@+id/description3"
-        android:layout_width="168dp"
+        android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="50dp"
-        android:gravity="center"
+        android:layout_marginEnd="16dp"
+        android:textAlignment="center"
         android:text="@string/desc_onboarding3"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
