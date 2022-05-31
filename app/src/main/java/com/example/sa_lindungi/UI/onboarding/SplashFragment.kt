@@ -17,11 +17,11 @@ class SplashFragment : Fragment() {
     ): View? {
         Handler().postDelayed({
             if (onboardingFinished()) {
-                findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
+                findNavController().navigate(R.id.action_splashFragment_to_homeActivity)
             } else {
                 findNavController().navigate(R.id.action_splashFragment_to_viewPagerFragment)
             }
-        }, 1000)
+        }, 2000)
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_splash, container, false)
     }

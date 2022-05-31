@@ -22,7 +22,7 @@ class ThirdScreen : Fragment() {
         val view = inflater.inflate(R.layout.fragment_third_screen, container, false)
 
         view.button_finish.setOnClickListener{
-            findNavController().navigate(R.id.action_viewPagerFragment_to_homeFragment)
+            findNavController().navigate(R.id.action_viewPagerFragment_to_homeFragment2)
             onboardingFinished()
         }
 

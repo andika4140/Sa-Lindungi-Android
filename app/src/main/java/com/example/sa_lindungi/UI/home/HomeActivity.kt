@@ -1,4 +1,4 @@
-package com.example.sa_lindungi.UI.scanAnimal
+package com.example.sa_lindungi.UI.home
 
 import android.content.Intent
 import android.os.Build
@@ -6,23 +6,24 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
-import com.example.sa_lindungi.UI.home.HomeActivity
-import com.example.sa_lindungi.UI.home.MainActivity
-import com.example.sa_lindungi.UI.onboarding.HomeFragment
-import com.example.sa_lindungi.databinding.ActivityResultBinding
-import com.google.android.material.internal.ContextUtils.getActivity
+import com.example.sa_lindungi.UI.scanAnimal.OptionActivity
+import com.example.sa_lindungi.databinding.ActivityHomeBinding
 
-class ResultActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityResultBinding
+class HomeActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityResultBinding.inflate(layoutInflater)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupView()
 
-        binding.buttonHome.setOnClickListener { toHome() }
+        binding.buttonKenaliSatwa.setOnClickListener {
+            val intentToOption = Intent(this, OptionActivity::class.java)
+            startActivity(intentToOption)
+        }
+
     }
 
     private fun setupView() {
@@ -36,11 +37,5 @@ class ResultActivity : AppCompatActivity() {
             )
         }
         supportActionBar?.hide()
-    }
-
-    private fun toHome() {
-        val intentToMain = Intent(this, HomeActivity::class.java)
-        startActivity(intentToMain)
-        finish()
     }
 }

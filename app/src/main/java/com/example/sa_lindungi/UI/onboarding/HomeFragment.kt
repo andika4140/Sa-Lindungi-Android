@@ -23,7 +23,6 @@ class HomeFragment : Fragment() {
             val intentToOption = Intent(context, OptionActivity::class.java)
             startActivity(intentToOption)
         }
-
         return view
     }
 
