@@ -9,7 +9,7 @@
         android:id="@+id/splashFragment"
         android:name="com.example.sa_lindungi.UI.onboarding.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
+        tools:layout="@layout/fragment_splash">
         <action
             android:id="@+id/action_splashFragment_to_viewPagerFragment"
             app:destination="@id/viewPagerFragment"
@@ -19,27 +19,32 @@
         <action
             android:id="@+id/action_splashFragment_to_homeActivity"
             app:destination="@id/homeActivity"
-            app:popUpTo="@id/splashFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/homeActivity"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/viewPagerFragment"
         android:name="com.example.sa_lindungi.UI.onboarding.ViewPagerFragment"
         android:label="fragment_view_pager"
-        tools:layout="@layout/fragment_view_pager" >
+        tools:layout="@layout/fragment_view_pager">
         <action
-            android:id="@+id/action_viewPagerFragment_to_homeFragment2"
-            app:destination="@id/homeFragment2"
-            app:popUpTo="@id/viewPagerFragment"
+            android:id="@+id/action_viewPagerFragment_to_homeActivity"
+            app:destination="@id/homeActivity"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/homeActivity"
             app:popUpToInclusive="true" />
     </fragment>
     <activity
         android:id="@+id/homeActivity"
         android:name="com.example.sa_lindungi.UI.home.HomeActivity"
         android:label="activity_home"
-        tools:layout="@layout/activity_home" />
-    <fragment
-        android:id="@+id/homeFragment2"
-        android:name="com.example.sa_lindungi.UI.onboarding.HomeFragment"
-        android:label="HomeFragment" />
+        tools:layout="@layout/activity_home">
+
+        <argument
+            android:name="clearBackstack"
+            app:argType="boolean"
+            android:defaultValue="true" />
+
+    </activity>
 </navigation>

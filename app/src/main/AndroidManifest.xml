@@ -19,7 +19,13 @@
             android:name=".UI.home.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".UI.scanAnimal.ResultActivity"
+            android:name=".UI.donation.donationDetail.DonationDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.donation.DonationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.scanAnimal.result.ResultActivity"
             android:exported="false" />
         <activity
             android:name=".UI.scanAnimal.PreviewActivity"

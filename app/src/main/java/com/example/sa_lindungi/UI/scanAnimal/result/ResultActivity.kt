@@ -1,19 +1,21 @@
-package com.example.sa_lindungi.UI.scanAnimal
+package com.example.sa_lindungi.UI.scanAnimal.result
 
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
+import androidx.lifecycle.ViewModelProvider
+import com.example.sa_lindungi.UI.api.response.SatwaResponseItem
 import com.example.sa_lindungi.UI.home.HomeActivity
 import com.example.sa_lindungi.UI.home.MainActivity
-import com.example.sa_lindungi.UI.onboarding.HomeFragment
 import com.example.sa_lindungi.databinding.ActivityResultBinding
-import com.google.android.material.internal.ContextUtils.getActivity
 
 class ResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityResultBinding
+    private lateinit var resultViewModel: ResultViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,8 +23,25 @@ class ResultActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setupView()
+        setupViewModel()
 
         binding.buttonHome.setOnClickListener { toHome() }
+    }
+
+    private fun setupViewModel() {
+        resultViewModel = ViewModelProvider(
+            this
+        )[ResultViewModel::class.java]
+
+        resultViewModel.isLoading.observe(this, {
+            showLoading(it)
+        })
+
+        resultViewModel.detailSatwa.observe(this, { satwa ->
+            setSatwaData(satwa)
+        })
+
+        resultViewModel.getSatwaDetail(1)
     }
 
     private fun setupView() {
@@ -40,7 +59,20 @@ class ResultActivity : AppCompatActivity() {
 
     private fun toHome() {
         val intentToMain = Intent(this, HomeActivity::class.java)
+        intentToMain.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intentToMain)
         finish()
+    }
+
+    private fun setSatwaData(satwa: SatwaResponseItem) {
+        binding.tvSatwaNameTitle.text = satwa.nama
+    }
+
+    private fun showLoading(isLoading: Boolean) {
+        if (isLoading) {
+            binding.progressBar.visibility = View.VISIBLE
+        } else {
+            binding.progressBar.visibility = View.INVISIBLE
+        }
     }
 }
