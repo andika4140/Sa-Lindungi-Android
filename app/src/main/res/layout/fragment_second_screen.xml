@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dimmed_white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".UI.onboarding.screens.SecondScreen">
 
@@ -10,18 +11,18 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        app:srcCompat="@drawable/onboarding_s2" />
 
     <TextView
         android:id="@+id/title2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="@string/title_onboarding"
+        android:text="@string/title_onboarding2"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,13 +30,13 @@
 
     <TextView
         android:id="@+id/description2"
-        android:layout_width="168dp"
+        android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="50dp"
-        android:gravity="center"
-        android:text="@string/desc_onboarding"
+        android:layout_marginEnd="16dp"
+        android:textAlignment="center"
+        android:text="@string/desc_onboarding2"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +56,7 @@
 <!--        app:layout_constraintEnd_toEndOf="parent" />-->
 
     <Button
-        android:id="@+id/button_next"
+        android:id="@+id/button_next2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/main_color"

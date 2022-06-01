@@ -13,10 +13,10 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
-import androidx.core.app.ActivityOptionsCompat
 import androidx.core.content.ContextCompat
-import com.example.sa_lindungi.R
+import com.example.sa_lindungi.UI.home.HomeActivity
 import com.example.sa_lindungi.UI.home.MainActivity
+import com.example.sa_lindungi.UI.scanAnimal.result.ResultActivity
 import com.example.sa_lindungi.databinding.ActivityOptionBinding
 import java.io.*
 
@@ -42,7 +42,7 @@ class OptionActivity : AppCompatActivity() {
         }
 
         binding.backButton.setOnClickListener {
-            val intentToMain = Intent(this, MainActivity::class.java)
+            val intentToMain = Intent(this, HomeActivity::class.java)
             intentToMain.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
             finish()
         }
