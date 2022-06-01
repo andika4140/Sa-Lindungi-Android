@@ -16,7 +16,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SaLindungi">
         <activity
-            android:name=".UI.scanAnimal.ResultActivity"
+            android:name=".UI.home.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.donation.donationDetail.DonationDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.donation.DonationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.scanAnimal.result.ResultActivity"
             android:exported="false" />
         <activity
             android:name=".UI.scanAnimal.PreviewActivity"
@@ -32,6 +41,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

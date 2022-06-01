@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.sa_lindungi.R
+import com.example.sa_lindungi.UI.donation.DonationActivity
 import com.example.sa_lindungi.UI.scanAnimal.OptionActivity
 import com.example.sa_lindungi.databinding.FragmentHomeBinding
 import kotlinx.android.synthetic.main.fragment_home.view.*
@@ -22,6 +23,11 @@ class HomeFragment : Fragment() {
         view.button_kenali_satwa.setOnClickListener {
             val intentToOption = Intent(context, OptionActivity::class.java)
             startActivity(intentToOption)
+        }
+
+        view.button_donasi.setOnClickListener {
+            val intentToDonation = Intent(context, DonationActivity::class.java)
+            startActivity(intentToDonation)
         }
 
         return view
