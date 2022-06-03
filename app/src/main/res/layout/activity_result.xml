@@ -8,7 +8,7 @@
     tools:context=".UI.scanAnimal.result.ResultActivity">
 
     <ImageView
-        android:id="@+id/previewImageView2"
+        android:id="@+id/iv_satwa"
         android:layout_width="260dp"
         android:layout_height="285dp"
         android:layout_marginStart="8dp"
@@ -18,7 +18,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_satwa_name_title"
-        app:layout_constraintVertical_bias="0.145"
+        app:layout_constraintVertical_bias="0.05"
         app:srcCompat="@drawable/komodo_image_example" />
 
     <TextView
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="20dp"
         android:gravity="center_horizontal|top"
         android:text="@string/nama_satwa"
         android:textAppearance="@style/nama_satwa"
@@ -52,18 +52,60 @@
         app:layout_constraintTop_toBottomOf="@+id/kenali_satw" />
 
     <TextView
-        android:id="@+id/nama_satwa_"
+        android:id="@+id/nama_latin_satwa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="15dp"
         android:gravity="center_horizontal|top"
-        android:text="@string/nama_satwa_description"
+        android:text="@string/nama_latin_satwa"
         android:textAppearance="@style/nama_satwa_description"
-        app:layout_constraintEnd_toEndOf="@+id/previewImageView2"
-        app:layout_constraintStart_toStartOf="@+id/previewImageView2"
-        app:layout_constraintTop_toBottomOf="@+id/previewImageView2" />
+        app:layout_constraintEnd_toEndOf="@+id/iv_satwa"
+        app:layout_constraintStart_toStartOf="@+id/iv_satwa"
+        app:layout_constraintTop_toBottomOf="@+id/iv_satwa" />
+
+    <TextView
+        android:id="@+id/lokasi_satwa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/lokasi_satwa"
+        android:textAppearance="@style/nama_satwa_description"
+        app:layout_constraintEnd_toEndOf="@+id/nama_latin_satwa"
+        app:layout_constraintStart_toStartOf="@+id/nama_latin_satwa"
+        app:layout_constraintTop_toBottomOf="@+id/nama_latin_satwa" />
+
+    <TextView
+        android:id="@+id/populasi_satwa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/populasi_satwa"
+        android:textAppearance="@style/nama_satwa_description"
+        app:layout_constraintEnd_toEndOf="@+id/lokasi_satwa"
+        app:layout_constraintStart_toStartOf="@+id/lokasi_satwa"
+        app:layout_constraintTop_toBottomOf="@+id/lokasi_satwa" />
+
+    <TextView
+        android:id="@+id/funfact_satwa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/funfact_satwa"
+        android:textAppearance="@style/nama_satwa_description"
+        app:layout_constraintEnd_toEndOf="@+id/populasi_satwa"
+        app:layout_constraintStart_toStartOf="@+id/populasi_satwa"
+        app:layout_constraintTop_toBottomOf="@+id/populasi_satwa" />
 
     <Button
         android:id="@+id/button_home"
@@ -91,15 +133,13 @@
         app:layout_constraintVertical_bias="0.414"
         tools:visibility="visible" />
 
-    <!--    <Button-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginEnd="32dp"-->
-<!--        android:layout_marginBottom="60dp"-->
-<!--        android:backgroundTint="@color/main_color"-->
-<!--        android:text="@string/donasi"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent" />-->
-
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="@color/main_color"
+        android:text="@string/donasi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
