@@ -18,11 +18,19 @@
     <string name="sudah_yakin">Sudah yakin dengan foto kamu?</string>
     <string name="next">lanjut</string>
     <string name="retry">ulang</string>
-    <string name="nama_satwa">Nama Satwa</string>
-    <string name="nama_satwa_description">Nama satwa ini Komodo!</string>
+    <string name="nama_satwa">Komodo</string>
+    <string name="nama_latin_satwa">Nama latin satwa ini Varanus Komodoensis</string>
+    <string name="lokasi_satwa">Satwa ini berlokasi di Pulau Komodo, Flores</string>
+    <string name="populasi_satwa">Populasinya berjumlah 3458</string>
+    <string name="funfact_satwa">Funfact! Komodo dipercayai adalah naga purba</string>
     <string name="home">home</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="nama_donasi">Donasi</string>
+    <string name="donasi_desc">Deskripsi dari organisasi</string>
+    <string name="donasi_lokasi">Lokasi dari organisasi</string>
+    <string name="donasi_rekening">Nomor rekening dari organisasi</string>
+    <string name="donasi_website">Website dari organisasi</string>
+    <string name="donasi_kontak">Kontak dari organisasi</string>
 
     <string name="prediction">prediksi</string>
 </resources>
