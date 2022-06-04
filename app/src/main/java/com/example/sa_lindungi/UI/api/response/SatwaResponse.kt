@@ -31,6 +31,28 @@ data class SatwaResponseItem(
 	@field:SerializedName("nama_saintifik")
 	val namaSaintifik: String? = null,
 
+	@field:SerializedName("gambar")
+	val gambar: String? = null,
+
 	@field:SerializedName("updatedAt")
 	val updatedAt: String? = null
+
 )
+
+//data class SatwaGambarsItem(
+//
+//	@field:SerializedName("createdAt")
+//	val createdAt: String? = null,
+//
+//	@field:SerializedName("id")
+//	val id: Int? = null,
+//
+//	@field:SerializedName("gambar")
+//	val gambar: String? = null,
+//
+//	@field:SerializedName("SatwaId")
+//	val satwaId: Int? = null,
+//
+//	@field:SerializedName("updatedAt")
+//	val updatedAt: String? = null
+//)

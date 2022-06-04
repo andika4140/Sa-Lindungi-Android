@@ -8,7 +8,9 @@ import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 import com.example.sa_lindungi.UI.api.response.SatwaResponseItem
+import com.example.sa_lindungi.UI.donation.DonationActivity
 import com.example.sa_lindungi.UI.home.HomeActivity
 import com.example.sa_lindungi.UI.home.MainActivity
 import com.example.sa_lindungi.databinding.ActivityResultBinding
@@ -26,6 +28,15 @@ class ResultActivity : AppCompatActivity() {
         setupViewModel()
 
         binding.buttonHome.setOnClickListener { toHome() }
+        binding.buttonDonasi.setOnClickListener { toDonation() }
+
+    }
+
+    private fun toDonation() {
+        val intentToMain = Intent(this, DonationActivity::class.java)
+        intentToMain.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(intentToMain)
+        finish()
     }
 
     private fun setupViewModel() {
@@ -67,6 +78,9 @@ class ResultActivity : AppCompatActivity() {
     }
 
     private fun setSatwaData(satwa: SatwaResponseItem) {
+        Glide.with(this)
+            .load(satwa.gambar)
+            .into(binding.ivSatwa)
         binding.tvSatwaNameTitle.text = satwa.nama
         binding.namaLatinSatwa.text = "Nama scientific satwa ini adalah ${satwa.namaSaintifik}"
         binding.lokasiSatwa.text = satwa.lokasi

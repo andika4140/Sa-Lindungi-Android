@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
+import androidx.appcompat.app.AlertDialog
 import com.bumptech.glide.Glide
 import com.example.sa_lindungi.R
 import com.example.sa_lindungi.UI.home.HomeActivity
@@ -51,10 +52,18 @@ class DonationDetailActivity : AppCompatActivity() {
     }
 
     private fun toHome() {
-        val intentToMain = Intent(this, HomeActivity::class.java)
-        intentToMain.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-        startActivity(intentToMain)
-        finish()
+        AlertDialog.Builder(this@DonationDetailActivity). apply {
+            setTitle("Terima Kasih!")
+            setMessage("Dengan bantuan donasi kamu, kamu telah membantu satwa langka di Indonesia")
+            setPositiveButton("Home") {_, _ ->
+                val intentToMain = Intent(context, HomeActivity::class.java)
+                intentToMain.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(intentToMain)
+                finish()
+            }
+            create()
+            show()
+        }
     }
 
     private fun setupView() {

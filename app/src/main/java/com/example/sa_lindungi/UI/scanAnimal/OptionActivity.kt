@@ -136,8 +136,8 @@ class OptionActivity : AppCompatActivity() {
                     response: Response<PredictResponse>
                 ) {
                     if (response.isSuccessful) {
-                        Log.d(TAG, "OnSuccess")
                         showLoading(false)
+                        Log.d(TAG, "OnSuccess")
                         val responseBody = response.body()
                         if (responseBody != null) {
                             val id = response.body()?.id
@@ -152,7 +152,7 @@ class OptionActivity : AppCompatActivity() {
                 }
 
                 override fun onFailure(call: Call<PredictResponse>, t: Throwable) {
-                    Log.d(TAG, "OnFailure")
+                    Log.d(TAG, "OnFailure : ${t.message}")
                     Toast.makeText(this@OptionActivity, "Gagal melakukan upload gambar", Toast.LENGTH_SHORT).show()
                 }
 
