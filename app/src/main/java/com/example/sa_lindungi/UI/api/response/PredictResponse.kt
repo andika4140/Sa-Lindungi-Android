@@ -2,6 +2,8 @@ package com.example.sa_lindungi.UI.api.response
 
 import com.google.gson.annotations.SerializedName
 
+//komen
+
 data class PredictResponse(
 
 	@field:SerializedName("message")
