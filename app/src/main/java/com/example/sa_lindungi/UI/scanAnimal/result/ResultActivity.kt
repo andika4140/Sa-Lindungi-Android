@@ -33,6 +33,8 @@ class ResultActivity : AppCompatActivity() {
             this
         )[ResultViewModel::class.java]
 
+        val id = intent.getIntExtra(EXTRA_ID, 0)
+
         resultViewModel.isLoading.observe(this, {
             showLoading(it)
         })
@@ -41,7 +43,7 @@ class ResultActivity : AppCompatActivity() {
             setSatwaData(satwa)
         })
 
-        resultViewModel.getSatwaDetail(12)
+        resultViewModel.getSatwaDetail(id)
     }
 
     private fun setupView() {
@@ -78,5 +80,9 @@ class ResultActivity : AppCompatActivity() {
         } else {
             binding.progressBar.visibility = View.INVISIBLE
         }
+    }
+
+    companion object {
+        const val EXTRA_ID = "extra_id"
     }
 }

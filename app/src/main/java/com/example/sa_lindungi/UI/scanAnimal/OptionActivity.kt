@@ -140,7 +140,10 @@ class OptionActivity : AppCompatActivity() {
                         showLoading(false)
                         val responseBody = response.body()
                         if (responseBody != null) {
+                            val id = response.body()?.id
+                            Log.d(TAG, "id satwa : $id")
                             val intentToResult = Intent(this@OptionActivity, ResultActivity::class.java)
+                            intentToResult.putExtra(ResultActivity.EXTRA_ID, id)
                             startActivity(intentToResult)
                         } else {
                             Toast.makeText(this@OptionActivity, response.message(), Toast.LENGTH_SHORT).show()
