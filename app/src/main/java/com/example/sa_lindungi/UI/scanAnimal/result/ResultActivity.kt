@@ -41,7 +41,7 @@ class ResultActivity : AppCompatActivity() {
             setSatwaData(satwa)
         })
 
-        resultViewModel.getSatwaDetail(1)
+        resultViewModel.getSatwaDetail(12)
     }
 
     private fun setupView() {
@@ -66,6 +66,10 @@ class ResultActivity : AppCompatActivity() {
 
     private fun setSatwaData(satwa: SatwaResponseItem) {
         binding.tvSatwaNameTitle.text = satwa.nama
+        binding.namaLatinSatwa.text = "Nama scientific satwa ini adalah ${satwa.namaSaintifik}"
+        binding.lokasiSatwa.text = satwa.lokasi
+        binding.populasiSatwa.text = satwa.populasi
+        binding.funfactSatwa.text = satwa.funfact
     }
 
     private fun showLoading(isLoading: Boolean) {

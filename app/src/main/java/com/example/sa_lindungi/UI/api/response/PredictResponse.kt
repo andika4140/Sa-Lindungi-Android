@@ -2,13 +2,13 @@ package com.example.sa_lindungi.UI.api.response
 
 import com.google.gson.annotations.SerializedName
 
-data class SatwaResponse(
+data class PredictResponse(
 
-	@field:SerializedName("SatwaResponse")
-	val satwaResponse: List<SatwaResponseItem?>? = null
-)
+	@field:SerializedName("message")
+	val message: String? = null,
 
-data class SatwaResponseItem(
+	@field:SerializedName("status")
+	val status: String? = null,
 
 	@field:SerializedName("createdAt")
 	val createdAt: String? = null,

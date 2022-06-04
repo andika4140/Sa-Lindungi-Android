@@ -29,9 +29,19 @@ class DonationDetailActivity : AppCompatActivity() {
         binding.buttonHome.setOnClickListener { toHome() }
 
         val name = intent.getStringExtra(EXTRA_NAMA)
+        val desc = intent.getStringExtra(EXTRA_DESKRIPSI)
+        val lokasi = intent.getStringExtra(EXTRA_LOKASI)
+        val kontak = intent.getStringExtra(EXTRA_KONTAK)
+        val website = intent.getStringExtra(EXTRA_WEBSITE)
+        val rekening = intent.getStringExtra(EXTRA_REKENING)
 
         binding.apply {
-            tvSatwaNameTitle.text = name
+            tvDonasi.text = name
+            donasiDesc.text = desc
+            donasiLokasi.text = lokasi
+            donasiKontak.text = kontak
+            donasiWebsite.text = website
+            donasiRekening.text = rekening
         }
     }
 

@@ -39,6 +39,11 @@ class DonationAdapter(private val listDonation: ArrayList<DonasiResponseItem>) :
                 binding.cardView.setOnClickListener {
                     val intentToDetail = Intent(itemView.context, DonationDetailActivity::class.java)
                     intentToDetail.putExtra(DonationDetailActivity.EXTRA_NAMA, data.nama)
+                    intentToDetail.putExtra(DonationDetailActivity.EXTRA_DESKRIPSI,data.deskripsi)
+                    intentToDetail.putExtra(DonationDetailActivity.EXTRA_KONTAK, data.kontak)
+                    intentToDetail.putExtra(DonationDetailActivity.EXTRA_LOKASI, data.lokasi)
+                    intentToDetail.putExtra(DonationDetailActivity.EXTRA_REKENING, data.rekening)
+                    intentToDetail.putExtra(DonationDetailActivity.EXTRA_WEBSITE, data.website)
                     itemView.context.startActivity(intentToDetail)
 //                    Toast.makeText(itemView.context, data.nama, Toast.LENGTH_SHORT).show()
                 }

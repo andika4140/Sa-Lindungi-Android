@@ -3,21 +3,32 @@ package com.example.sa_lindungi.UI.scanAnimal
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.sa_lindungi.UI.api.ApiConfig
+import com.example.sa_lindungi.UI.api.response.PredictResponse
 import com.example.sa_lindungi.UI.home.HomeActivity
 import com.example.sa_lindungi.UI.home.MainActivity
 import com.example.sa_lindungi.UI.scanAnimal.result.ResultActivity
 import com.example.sa_lindungi.databinding.ActivityOptionBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.MultipartBody
+import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.*
 
 class OptionActivity : AppCompatActivity() {
@@ -49,7 +60,7 @@ class OptionActivity : AppCompatActivity() {
 
         binding.cameraButton.setOnClickListener { startCameraX() }
         binding.galleryButton.setOnClickListener { startGallery() }
-        binding.buttonNext.setOnClickListener { toResult() }
+        binding.buttonNext.setOnClickListener { postPhoto() }
     }
 
     private fun toResult() {
@@ -104,6 +115,50 @@ class OptionActivity : AppCompatActivity() {
         supportActionBar?.hide()
     }
 
+    private fun postPhoto() {
+        showLoading(true)
+        if (getFile != null) {
+            val file = reduceFileImage(getFile as File)
+
+            val requestImageFile = file.asRequestBody("image/jpeg".toMediaTypeOrNull())
+            val imageMultipart: MultipartBody.Part = MultipartBody.Part.createFormData(
+                "file",
+                file.name,
+                requestImageFile
+            )
+
+            Log.d(TAG, "image $imageMultipart")
+
+            val service = ApiConfig.getApiService().postPredict(imageMultipart)
+            service.enqueue(object : Callback<PredictResponse> {
+                override fun onResponse(
+                    call: Call<PredictResponse>,
+                    response: Response<PredictResponse>
+                ) {
+                    if (response.isSuccessful) {
+                        Log.d(TAG, "OnSuccess")
+                        showLoading(false)
+                        val responseBody = response.body()
+                        if (responseBody != null) {
+                            val intentToResult = Intent(this@OptionActivity, ResultActivity::class.java)
+                            startActivity(intentToResult)
+                        } else {
+                            Toast.makeText(this@OptionActivity, response.message(), Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                }
+
+                override fun onFailure(call: Call<PredictResponse>, t: Throwable) {
+                    Log.d(TAG, "OnFailure")
+                    Toast.makeText(this@OptionActivity, "Gagal melakukan upload gambar", Toast.LENGTH_SHORT).show()
+                }
+
+            })
+        } else {
+            Toast.makeText(this, "Silahkan masukkan berkas gambar terlebih dahulu", Toast.LENGTH_SHORT).show()
+        }
+    }
+
     private fun startCameraX() {
         val intent = Intent(this, CameraActivity::class.java)
         launcherIntentCameraX.launch(intent)
@@ -140,10 +195,35 @@ class OptionActivity : AppCompatActivity() {
         }
     }
 
+    private fun reduceFileImage(file: File): File {
+        val bitmap = BitmapFactory.decodeFile(file.path)
+        var compressQuality = 100
+        var streamLength: Int
+        do {
+            val bmpStream = ByteArrayOutputStream()
+            bitmap.compress(Bitmap.CompressFormat.JPEG, compressQuality, bmpStream)
+            val bmpPicByteArray = bmpStream.toByteArray()
+            streamLength = bmpPicByteArray.size
+            compressQuality -= 5
+        } while (streamLength > 1000000)
+        bitmap.compress(Bitmap.CompressFormat.JPEG, compressQuality, FileOutputStream(file))
+        return file
+    }
+
+    private fun showLoading(isLoading: Boolean) {
+        if (isLoading) {
+            binding.progressBar.visibility = View.VISIBLE
+        } else {
+            binding.progressBar.visibility = View.INVISIBLE
+        }
+    }
+
     companion object {
         const val CAMERA_X_RESULT = 200
 
         private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
         private const val REQUEST_CODE_PERMISSIONS = 10
+
+        private const val TAG = "OptionActivity"
     }
 }
