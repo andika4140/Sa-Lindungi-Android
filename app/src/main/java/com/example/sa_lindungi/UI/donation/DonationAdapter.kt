@@ -44,6 +44,7 @@ class DonationAdapter(private val listDonation: ArrayList<DonasiResponseItem>) :
                     intentToDetail.putExtra(DonationDetailActivity.EXTRA_LOKASI, data.lokasi)
                     intentToDetail.putExtra(DonationDetailActivity.EXTRA_REKENING, data.rekening)
                     intentToDetail.putExtra(DonationDetailActivity.EXTRA_WEBSITE, data.website)
+                    intentToDetail.putExtra(DonationDetailActivity.EXTRA_GAMBAR, data.gambar)
                     itemView.context.startActivity(intentToDetail)
 //                    Toast.makeText(itemView.context, data.nama, Toast.LENGTH_SHORT).show()
                 }

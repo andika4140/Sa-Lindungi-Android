@@ -35,7 +35,7 @@ data class DonasiResponseItem(
 	val deskripsi: String? = null,
 
 	@field:SerializedName("gambar")
-	val gambar: Any? = null
+	val gambar: String? = null
 
 //	@field:SerializedName("updatedAt")
 //	val updatedAt: String? = null

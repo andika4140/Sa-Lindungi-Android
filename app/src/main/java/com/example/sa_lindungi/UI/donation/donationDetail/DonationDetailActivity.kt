@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
+import com.bumptech.glide.Glide
 import com.example.sa_lindungi.R
 import com.example.sa_lindungi.UI.home.HomeActivity
 import com.example.sa_lindungi.UI.home.MainActivity
@@ -34,6 +35,7 @@ class DonationDetailActivity : AppCompatActivity() {
         val kontak = intent.getStringExtra(EXTRA_KONTAK)
         val website = intent.getStringExtra(EXTRA_WEBSITE)
         val rekening = intent.getStringExtra(EXTRA_REKENING)
+        val gambar = intent.getStringExtra(EXTRA_GAMBAR)
 
         binding.apply {
             tvDonasi.text = name
@@ -42,6 +44,9 @@ class DonationDetailActivity : AppCompatActivity() {
             donasiKontak.text = kontak
             donasiWebsite.text = website
             donasiRekening.text = rekening
+            Glide.with(this@DonationDetailActivity)
+                .load(gambar)
+                .into(ivDonasi)
         }
     }
 

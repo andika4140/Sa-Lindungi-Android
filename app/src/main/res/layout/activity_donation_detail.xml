@@ -45,12 +45,13 @@
         android:gravity="center_horizontal|top"
         android:text="@string/nama_donasi"
         android:textAppearance="@style/nama_satwa"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_donasi"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.688"
-        app:layout_constraintStart_toStartOf="@+id/donasi"
-        app:layout_constraintTop_toTopOf="@+id/iv_donasi"
-        app:layout_constraintVertical_bias="0.489" />
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toEndOf="@+id/iv_donasi"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.459" />
 
     <Button
         android:id="@+id/button_home"
@@ -84,66 +85,66 @@
         android:id="@+id/donasi_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="4dp"
         android:gravity="center_horizontal|top"
         android:text="@string/donasi_desc"
         android:textAppearance="@style/nama_satwa_description"
-        app:layout_constraintEnd_toEndOf="@+id/iv_donasi"
-        app:layout_constraintHorizontal_bias="0.077"
-        app:layout_constraintStart_toStartOf="@+id/iv_donasi"
-        app:layout_constraintTop_toTopOf="@+id/iv_donasi" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <TextView
         android:id="@+id/donasi_lokasi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:gravity="center_horizontal|top"
         android:text="@string/donasi_lokasi"
         android:textAppearance="@style/nama_satwa_description"
-        app:layout_constraintEnd_toEndOf="@+id/donasi_desc"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/donasi_desc"
-        app:layout_constraintTop_toTopOf="@+id/donasi_desc" />
+        app:layout_constraintTop_toBottomOf="@+id/donasi_desc" />
 
     <TextView
         android:id="@+id/donasi_rekening"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:gravity="center_horizontal|top"
         android:text="@string/donasi_rekening"
         android:textAppearance="@style/nama_satwa_description"
-        app:layout_constraintEnd_toEndOf="@+id/donasi_lokasi"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/donasi_lokasi"
-        app:layout_constraintTop_toTopOf="@+id/donasi_lokasi" />
+        app:layout_constraintTop_toBottomOf="@+id/donasi_lokasi" />
 
     <TextView
         android:id="@+id/donasi_website"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:gravity="center_horizontal|top"
         android:text="@string/donasi_website"
         android:textAppearance="@style/nama_satwa_description"
-        app:layout_constraintEnd_toEndOf="@+id/donasi_rekening"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/donasi_rekening"
-        app:layout_constraintTop_toTopOf="@+id/donasi_rekening" />
+        app:layout_constraintTop_toBottomOf="@+id/donasi_rekening" />
 
     <TextView
         android:id="@+id/donasi_kontak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:gravity="center_horizontal|top"
         android:text="@string/donasi_kontak"
         android:textAppearance="@style/nama_satwa_description"
-        app:layout_constraintEnd_toEndOf="@+id/donasi_website"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/donasi_website"
-        app:layout_constraintTop_toTopOf="@+id/donasi_website" />
+        app:layout_constraintTop_toBottomOf="@+id/donasi_website" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -157,7 +158,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="304dp" />
+        app:layout_constraintGuide_end="427dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
