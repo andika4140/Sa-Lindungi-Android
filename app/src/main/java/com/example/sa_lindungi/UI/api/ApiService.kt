@@ -11,7 +11,7 @@ interface ApiService {
     fun getAllSatwa(): Call<SatwaResponse>
 
     //satwa by id
-    @GET("/satwa/{id}")
+    @GET("/satwa/v2/{id}")
     fun getSatwa(
         @Path("id") id: Int
     ): Call<SatwaResponseItem>
@@ -26,9 +26,16 @@ interface ApiService {
         @Path("id") id: Int
     ): Call<SatwaResponseItem>
 
+    //predict
     @Multipart
     @POST("/predict")
     fun postPredict(
         @Part file: MultipartBody.Part
     ): Call<PredictResponse>
+
+    //satwa-donasi
+    @GET("/satwa-donasi/satwa/{id}")
+    fun getDonasiSatwa(
+        @Path("id") id: Int
+    ): Call<Donasi>
 }
