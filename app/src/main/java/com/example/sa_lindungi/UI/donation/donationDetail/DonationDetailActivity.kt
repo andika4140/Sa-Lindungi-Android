@@ -1,6 +1,7 @@
 package com.example.sa_lindungi.UI.donation.donationDetail
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -43,21 +44,27 @@ class DonationDetailActivity : AppCompatActivity() {
             donasiDesc.text = desc
             donasiLokasi.text = lokasi
             donasiKontak.text = kontak
-            donasiWebsite.text = website
             donasiRekening.text = rekening
             Glide.with(this@DonationDetailActivity)
                 .load(gambar)
                 .into(ivDonasi)
         }
+
+        binding.buttonWebsite.setOnClickListener {
+            val urlWeb: Uri = Uri.parse(website)
+            val intentToWeb = Intent(Intent.ACTION_VIEW, urlWeb)
+            startActivity(intentToWeb)
+        }
     }
 
     private fun toHome() {
-        AlertDialog.Builder(this@DonationDetailActivity). apply {
+        AlertDialog.Builder(this@DonationDetailActivity).apply {
             setTitle("Terima Kasih!")
             setMessage("Dengan bantuan donasi kamu, kamu telah membantu satwa langka di Indonesia")
-            setPositiveButton("Home") {_, _ ->
+            setPositiveButton("Home") { _, _ ->
                 val intentToMain = Intent(context, HomeActivity::class.java)
-                intentToMain.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                intentToMain.flags =
+                    Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                 startActivity(intentToMain)
                 finish()
             }
