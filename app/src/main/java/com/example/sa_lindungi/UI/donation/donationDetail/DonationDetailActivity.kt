@@ -40,12 +40,20 @@ class DonationDetailActivity : AppCompatActivity() {
 
         binding.apply {
             tvDonasi.text = name
-            donasiDesc.text = desc
-            donasiLokasi.text = lokasi
-            donasiKontak.text = kontak
-            donasiRekening.text = rekening
+            tvDeskripsi.text = desc
+            if (lokasi!!.isEmpty()) {
+                tvLokasi.text = getString(R.string.lokasi_empty)
+            } else tvLokasi.text = lokasi
+            if (kontak!!.isEmpty()) {
+                tvKontak.text = getString(R.string.kontak_empty)
+            } else tvKontak.text = kontak
+            if (rekening!!.isEmpty()) {
+                tvRekening.text = getString(R.string.rekening_empty)
+            } else tvRekening.text = rekening
+
             Glide.with(this@DonationDetailActivity)
                 .load(gambar)
+                .placeholder(R.drawable.replacement_image_preview)
                 .into(ivDonasi)
         }
 

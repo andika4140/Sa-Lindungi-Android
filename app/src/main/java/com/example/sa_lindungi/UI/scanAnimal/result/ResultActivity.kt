@@ -84,10 +84,10 @@ class ResultActivity : AppCompatActivity() {
             .load(satwa.gambar)
             .into(binding.ivSatwa)
         binding.tvSatwaNameTitle.text = satwa.nama
-        binding.namaLatinSatwa.text = "Nama scientific satwa ini adalah ${satwa.namaSaintifik}"
-        binding.lokasiSatwa.text = "Satwa ini terletak pada ${satwa.lokasi}"
-        binding.populasiSatwa.text = satwa.populasi
-        binding.funfactSatwa.text = "Funfact  mengenai ${satwa.nama} yaitu ${satwa.funfact}"
+        binding.tvDeskripsi.text = "Nama scientific satwa ini adalah ${satwa.namaSaintifik}"
+        binding.tvLokasiSatwa.text = "Satwa ini terletak pada ${satwa.lokasi}"
+        binding.tvPopulasi.text = satwa.populasi
+        binding.tvFunfact.text = "Fakta menarik mengenai ${satwa.nama} yaitu ${satwa.funfact}"
     }
 
     private fun showLoading(isLoading: Boolean) {

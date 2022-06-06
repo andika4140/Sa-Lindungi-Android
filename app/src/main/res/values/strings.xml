@@ -33,5 +33,16 @@
     <string name="donasi_kontak">Kontak dari organisasi</string>
 
     <string name="prediction">prediksi</string>
-    <string name="website">website</string>
+    <string name="website">donasi ke website</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="lokasi">Lokasi</string>
+    <string name="rekening">Rekening</string>
+    <string name="kontak">Kontak</string>
+    <string name="lokasi_empty">Data lokasi belum ada</string>
+    <string name="kontak_empty">Data kontak belum ada</string>
+    <string name="rekening_empty">Data rekening belum ada</string>
+    <string name="nama_scientific">Nama Scientific</string>
+    <string name="lokasi_satwa_desc">Lokasi Satwa</string>
+    <string name="populasi_satwa_title">Populasi Satwa</string>
+    <string name="fakta_menarik">Fakta Menarik</string>
 </resources>
