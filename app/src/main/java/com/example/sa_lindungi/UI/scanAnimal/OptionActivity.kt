@@ -63,15 +63,6 @@ class OptionActivity : AppCompatActivity() {
         binding.buttonNext.setOnClickListener { postPhoto() }
     }
 
-    private fun toResult() {
-        if (getFile != null) {
-            val intentToResult = Intent(this, ResultActivity::class.java)
-            startActivity(intentToResult)
-        } else {
-            Toast.makeText(this, "Silahkan masukkan berkas gambar terlebih dahulu", Toast.LENGTH_SHORT).show()
-        }
-    }
-
     private fun startGallery() {
         val intent = Intent()
         intent.action = Intent.ACTION_GET_CONTENT
@@ -135,8 +126,8 @@ class OptionActivity : AppCompatActivity() {
                     call: Call<PredictResponse>,
                     response: Response<PredictResponse>
                 ) {
-                    if (response.isSuccessful) {
-                        showLoading(false)
+                    showLoading(false)
+                    if (response.isSuccessful && response.body()?.message != "Tidak terdeteksi") {
                         Log.d(TAG, "OnSuccess")
                         val responseBody = response.body()
                         if (responseBody != null) {
@@ -146,7 +137,7 @@ class OptionActivity : AppCompatActivity() {
                             intentToResult.putExtra(ResultActivity.EXTRA_ID, id)
                             startActivity(intentToResult)
                         } else {
-                            Toast.makeText(this@OptionActivity, response.message(), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@OptionActivity, response.body()?.message, Toast.LENGTH_SHORT).show()
                         }
                     }
                 }

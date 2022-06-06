@@ -48,7 +48,7 @@
 
             <TextView
                 android:id="@+id/tv_donasi"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="36dp"
@@ -63,7 +63,7 @@
 
             <TextView
                 android:id="@+id/donasi_desc"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="20dp"
@@ -77,10 +77,11 @@
 
             <TextView
                 android:id="@+id/donasi_lokasi"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 android:text="@string/donasi_lokasi"
                 android:textAppearance="@style/nama_satwa_description"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -90,7 +91,7 @@
 
             <TextView
                 android:id="@+id/donasi_rekening"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
@@ -104,7 +105,7 @@
 
             <TextView
                 android:id="@+id/donasi_kontak"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
@@ -121,7 +122,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginBottom="60dp"
                 android:backgroundTint="@color/main_color"
                 android:text="@string/home"

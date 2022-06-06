@@ -34,8 +34,14 @@ interface ApiService {
     ): Call<PredictResponse>
 
     //satwa-donasi
-    @GET("/satwa-donasi/satwa/{id}")
-    fun getDonasiSatwa(
+    @GET("/satwa-donasi/v2/satwa/{id}")
+    fun getSatwaDonasi(
         @Path("id") id: Int
-    ): Call<Donasi>
+    ): Call<List<DonasiResponseItem>>
+
+//    //satwa-donasi
+//    @GET("/satwa-donasi/satwa/{id}")
+//    fun getDonasiSatwa(
+//        @Path("id") id: Int
+//    ): Call<Donasi>
 }

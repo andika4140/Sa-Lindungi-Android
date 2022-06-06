@@ -29,7 +29,6 @@ class DonationDetailActivity : AppCompatActivity() {
     }
 
     private fun setupAction() {
-        binding.buttonHome.setOnClickListener { toHome() }
 
         val name = intent.getStringExtra(EXTRA_NAMA)
         val desc = intent.getStringExtra(EXTRA_DESKRIPSI)
@@ -50,6 +49,22 @@ class DonationDetailActivity : AppCompatActivity() {
                 .into(ivDonasi)
         }
 
+        binding.buttonHome.setOnClickListener {
+            AlertDialog.Builder(this@DonationDetailActivity).apply {
+                setTitle("Terima Kasih!")
+                setMessage("Dengan bantuan donasi kamu, kamu telah membantu satwa langka di Indonesia")
+                setPositiveButton("Home") { _, _ ->
+                    val intentToMain = Intent(context, HomeActivity::class.java)
+                    intentToMain.flags =
+                        Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                    startActivity(intentToMain)
+                    finish()
+                }
+                create()
+                show()
+            }
+        }
+
         binding.buttonWebsite.setOnClickListener {
             val urlWeb: Uri = Uri.parse(website)
             val intentToWeb = Intent(Intent.ACTION_VIEW, urlWeb)
@@ -58,19 +73,7 @@ class DonationDetailActivity : AppCompatActivity() {
     }
 
     private fun toHome() {
-        AlertDialog.Builder(this@DonationDetailActivity).apply {
-            setTitle("Terima Kasih!")
-            setMessage("Dengan bantuan donasi kamu, kamu telah membantu satwa langka di Indonesia")
-            setPositiveButton("Home") { _, _ ->
-                val intentToMain = Intent(context, HomeActivity::class.java)
-                intentToMain.flags =
-                    Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-                startActivity(intentToMain)
-                finish()
-            }
-            create()
-            show()
-        }
+
     }
 
     private fun setupView() {

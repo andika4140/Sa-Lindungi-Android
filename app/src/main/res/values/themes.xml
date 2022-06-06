@@ -16,7 +16,7 @@
 
     <style name="sa_lindungi">
         <item name="android:textSize">
-            36sp
+            32sp
         </item>
         <item name="android:letterSpacing">
             0.12

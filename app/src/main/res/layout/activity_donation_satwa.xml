@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_app"
-    tools:context=".UI.donation.DonationActivity">
+    tools:context=".UI.donation.donationSatwa.DonationSatwaActivity">
 
     <TextView
         android:id="@+id/donasi"
@@ -70,3 +70,6 @@
         tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

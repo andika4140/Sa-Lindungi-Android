@@ -1,4 +1,4 @@
-package com.example.sa_lindungi.UI.donation
+package com.example.sa_lindungi.UI.donation.donationSatwa
 
 import android.content.Intent
 import android.os.Build
@@ -7,23 +7,23 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sa_lindungi.R
 import com.example.sa_lindungi.UI.api.response.DonasiResponseItem
+import com.example.sa_lindungi.UI.donation.DonationAdapter
+import com.example.sa_lindungi.UI.donation.DonationViewModel
 import com.example.sa_lindungi.UI.home.HomeActivity
-import com.example.sa_lindungi.UI.home.MainActivity
-import com.example.sa_lindungi.databinding.ActivityDonationBinding
+import com.example.sa_lindungi.UI.scanAnimal.result.ResultActivity
+import com.example.sa_lindungi.databinding.ActivityDonationSatwaBinding
 
-class DonationActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityDonationBinding
-    private lateinit var donationViewModel: DonationViewModel
+class DonationSatwaActivity : AppCompatActivity() {
+    private lateinit var binding : ActivityDonationSatwaBinding
+    private lateinit var donationSatwaViewModel: DonationSatwaViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDonationBinding.inflate(layoutInflater)
+        binding = ActivityDonationSatwaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupView()
@@ -33,8 +33,8 @@ class DonationActivity : AppCompatActivity() {
 
     private fun setupAction() {
         binding.backButton.setOnClickListener {
-            val intentToHome = Intent(this, HomeActivity::class.java)
-            intentToHome.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            val intentToResult = Intent(this, ResultActivity::class.java)
+            intentToResult.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
             finish()
         }
 
@@ -45,16 +45,18 @@ class DonationActivity : AppCompatActivity() {
     }
 
     private fun setupViewModel() {
-        donationViewModel = ViewModelProvider(
+        donationSatwaViewModel = ViewModelProvider(
             this
-        )[DonationViewModel::class.java]
+        )[DonationSatwaViewModel::class.java]
 
-        donationViewModel.isLoading.observe(this, {
+        donationSatwaViewModel.isLoading.observe(this, {
             showLoading(it)
         })
 
-        donationViewModel.getListDonation()
-        donationViewModel.listDonation.observe(this, { donasi ->
+        val id = intent.getIntExtra(EXTRA_ID, 0)
+
+        donationSatwaViewModel.getListDonation(id)
+        donationSatwaViewModel.listDonationSatwa.observe(this, { donasi ->
             setListDonation(donasi)
         })
     }
@@ -87,5 +89,9 @@ class DonationActivity : AppCompatActivity() {
             )
         }
         supportActionBar?.hide()
+    }
+
+    companion object {
+        const val EXTRA_ID = "extra id"
     }
 }

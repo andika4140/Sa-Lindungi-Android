@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.example.sa_lindungi.UI.api.response.SatwaResponseItem
 import com.example.sa_lindungi.UI.donation.DonationActivity
+import com.example.sa_lindungi.UI.donation.donationSatwa.DonationSatwaActivity
 import com.example.sa_lindungi.UI.home.HomeActivity
 import com.example.sa_lindungi.UI.home.MainActivity
 import com.example.sa_lindungi.databinding.ActivityResultBinding
@@ -28,15 +29,8 @@ class ResultActivity : AppCompatActivity() {
         setupViewModel()
 
         binding.buttonHome.setOnClickListener { toHome() }
-        binding.buttonDonasi.setOnClickListener { toDonation() }
+//        binding.buttonDonasi.setOnClickListener { toDonation() }
 
-    }
-
-    private fun toDonation() {
-        val intentToMain = Intent(this, DonationActivity::class.java)
-        intentToMain.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-        startActivity(intentToMain)
-        finish()
     }
 
     private fun setupViewModel() {
@@ -45,6 +39,14 @@ class ResultActivity : AppCompatActivity() {
         )[ResultViewModel::class.java]
 
         val id = intent.getIntExtra(EXTRA_ID, 0)
+
+        binding.buttonDonasi.setOnClickListener {
+            val intentToDonation = Intent(this, DonationSatwaActivity::class.java)
+//        intentToMain.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            intentToDonation.putExtra(DonationSatwaActivity.EXTRA_ID, id)
+            startActivity(intentToDonation)
+            finish()
+        }
 
         resultViewModel.isLoading.observe(this, {
             showLoading(it)
@@ -83,9 +85,9 @@ class ResultActivity : AppCompatActivity() {
             .into(binding.ivSatwa)
         binding.tvSatwaNameTitle.text = satwa.nama
         binding.namaLatinSatwa.text = "Nama scientific satwa ini adalah ${satwa.namaSaintifik}"
-        binding.lokasiSatwa.text = satwa.lokasi
+        binding.lokasiSatwa.text = "Satwa ini terletak pada ${satwa.lokasi}"
         binding.populasiSatwa.text = satwa.populasi
-        binding.funfactSatwa.text = satwa.funfact
+        binding.funfactSatwa.text = "Funfact  mengenai ${satwa.nama} yaitu ${satwa.funfact}"
     }
 
     private fun showLoading(isLoading: Boolean) {
