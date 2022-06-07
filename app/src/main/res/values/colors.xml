@@ -11,4 +11,9 @@
     <color name="dimmed_white">#F6F6F6</color>
     <color name="main_color">#61714D</color>
     <color name="secondary_color">#8FAE93</color>
+    <color name="dimmed_green">#8E9C7F</color>
+    <color name="yellow_button">#FFB61D</color>
+    <color name="scientific_name_green">#ABB3A1</color>
+    <color name="black_description">#414340</color>
+    <color name="cv_color">#D8DED4</color>
 </resources>

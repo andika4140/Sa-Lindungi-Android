@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_app"
+    android:background="@drawable/bg_app_other"
     android:orientation="vertical"
     tools:context=".UI.donation.donationDetail.DonationDetailActivity">
 
@@ -15,9 +15,11 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_bold"
         android:gravity="center_horizontal|top"
         android:text="@string/donasi"
-        android:textAppearance="@style/donasi"
+        android:textAppearance="@style/sa_lindungi_2"
+        android:textSize="33sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +41,7 @@
             <ImageView
                 android:id="@+id/iv_donasi"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="250dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -51,10 +53,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppins_semi_bold"
                 android:text="@string/nama_donasi"
-                android:textAppearance="@style/nama_satwa"
+                android:textAppearance="@style/home_title"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -69,9 +72,10 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="24dp"
-                android:backgroundTint="@color/main_color"
                 android:text="@string/home"
-                android:textColor="@color/white"
+                android:backgroundTint="@color/yellow_button"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:textColor="@color/dimmed_white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -84,9 +88,10 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="16dp"
-                android:backgroundTint="@color/main_color"
                 android:text="@string/website"
-                android:textColor="@color/white"
+                android:backgroundTint="@color/yellow_button"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:textColor="@color/dimmed_white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cv_kontak" />
@@ -95,8 +100,10 @@
                 android:id="@+id/cv_deskripsi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="11dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/cv_color"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -112,9 +119,9 @@
                         android:id="@+id/tv_deskripsi_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_regular"
                         android:text="@string/deskripsi"
-                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textColor="@color/main_color"
                         android:textSize="18sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -125,9 +132,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:fontFamily="@font/roboto_light"
                         android:text="@string/donasi_desc"
-                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textColor="@color/black_description"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tv_deskripsi_title" />
@@ -138,8 +145,10 @@
                 android:id="@+id/cv_lokasi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="11dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/cv_color"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -155,9 +164,9 @@
                         android:id="@+id/tv_lokasi_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_regular"
                         android:text="@string/lokasi"
-                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textColor="@color/main_color"
                         android:textSize="18sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -168,9 +177,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:fontFamily="@font/roboto_light"
                         android:text="@string/donasi_lokasi"
-                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textColor="@color/black_description"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tv_lokasi_title" />
@@ -181,8 +190,10 @@
                 android:id="@+id/cv_rekening"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="11dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/cv_color"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -198,9 +209,9 @@
                         android:id="@+id/tv_rekening_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_regular"
                         android:text="@string/rekening"
-                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textColor="@color/main_color"
                         android:textSize="18sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -211,9 +222,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:fontFamily="@font/roboto_light"
                         android:text="@string/donasi_lokasi"
-                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textColor="@color/black_description"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tv_rekening_title" />
@@ -224,8 +235,10 @@
                 android:id="@+id/cv_kontak"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="11dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/cv_color"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -241,9 +254,9 @@
                         android:id="@+id/tv_kontak_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_regular"
                         android:text="@string/kontak"
-                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textColor="@color/main_color"
                         android:textSize="18sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -254,9 +267,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:fontFamily="@font/roboto_light"
                         android:text="@string/donasi_lokasi"
-                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textColor="@color/black_description"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tv_kontak_title" />
@@ -267,19 +280,19 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.414"
-        tools:visibility="visible" />
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progressBar"-->
+<!--        style="?android:attr/progressBarStyle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="gone"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.414"-->
+<!--        tools:visibility="visible" />-->
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -293,7 +306,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="555dp" />
+        app:layout_constraintGuide_end="556dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"

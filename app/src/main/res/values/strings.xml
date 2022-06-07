@@ -2,6 +2,8 @@
     <string name="app_name">Sa-Lindungi</string>
     <string name="sa_lindungi">Sa-Lindungi</string>
     <string name="kenali_satw">Kenali Satwa</string>
+    <string name="home_title">Hai kawan Pelindung Satwa!</string>
+    <string name="home_title_desc">Sudah donasi hari ini?</string>
 
     <string name="donasi">Donasi</string>
     <string name="donasi_comp">Donasi Company</string>

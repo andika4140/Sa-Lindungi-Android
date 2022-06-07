@@ -54,6 +54,7 @@ class DonationDetailActivity : AppCompatActivity() {
             Glide.with(this@DonationDetailActivity)
                 .load(gambar)
                 .placeholder(R.drawable.replacement_image_preview)
+                .centerCrop()
                 .into(ivDonasi)
         }
 

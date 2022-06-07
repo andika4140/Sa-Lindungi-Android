@@ -32,7 +32,7 @@ class DonationAdapter(private val listDonation: ArrayList<DonasiResponseItem>) :
         RecyclerView.ViewHolder(binding.root) {
             fun bind(data: DonasiResponseItem) {
                 Glide.with(itemView)
-                    .load(data.gambar)
+                    .load(data.logo)
                     .placeholder(R.drawable.replacement_image_preview)
                     .into(binding.ivAvatar)
                 binding.tvDonasi.text = data.nama

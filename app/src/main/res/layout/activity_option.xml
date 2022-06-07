@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_app"
+    android:background="@drawable/bg_app_other"
     tools:context=".UI.scanAnimal.OptionActivity">
 
     <TextView
@@ -14,9 +14,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_bold"
         android:gravity="center_horizontal|top"
         android:text="@string/kenali_satw"
-        android:textAppearance="@style/kenali_satwa"
+        android:textAppearance="@style/sa_lindungi_2"
+        android:textSize="33sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,21 +43,22 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins_semi_bold"
         android:gravity="top"
         android:text="@string/pilih_sumbe"
-        android:textAppearance="@style/pilih_sumber"
+        android:textAppearance="@style/option_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kenali_satw" />
+        app:layout_constraintTop_toBottomOf="@+id/guideline" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/camera_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/previewImageView"
         app:srcCompat="@drawable/camera_button_2" />
@@ -88,14 +91,18 @@
         android:id="@+id/button_next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="60dp"
-        android:backgroundTint="@color/main_color"
-        android:text="@string/prediction"
+        android:backgroundTint="@color/yellow_button"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="@string/next"
         android:textColor="@color/dimmed_white"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera_button" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -110,5 +117,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.414"
         tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="79dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
