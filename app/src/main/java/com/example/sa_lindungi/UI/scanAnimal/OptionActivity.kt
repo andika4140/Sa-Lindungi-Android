@@ -17,6 +17,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.bumptech.glide.Glide
 import com.example.sa_lindungi.UI.api.ApiConfig
 import com.example.sa_lindungi.UI.api.response.PredictResponse
 import com.example.sa_lindungi.UI.home.HomeActivity
@@ -172,7 +173,12 @@ class OptionActivity : AppCompatActivity() {
                 isBackCamera
             )
 
-            binding.previewImageView.setImageBitmap(result)
+            Glide.with(this)
+                .load(result)
+                .centerCrop()
+                .into(binding.previewImageView)
+
+//            binding.previewImageView.setImageBitmap(result)
         }
     }
 
@@ -185,7 +191,12 @@ class OptionActivity : AppCompatActivity() {
 
             getFile = myFile
 
-            binding.previewImageView.setImageURI(selectedImg)
+            Glide.with(this)
+                .load(selectedImg)
+                .centerCrop()
+                .into(binding.previewImageView)
+
+//            binding.previewImageView.setImageURI(selectedImg)
         }
     }
 
