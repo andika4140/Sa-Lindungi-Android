@@ -21,7 +21,7 @@
     <string name="next">lanjut</string>
     <string name="retry">ulang</string>
     <string name="nama_satwa">Komodo</string>
-    <string name="nama_latin_satwa">Nama latin satwa ini Varanus Komodoensis</string>
+    <string name="nama_latin_satwa"><i>(Varanus Komodoensis)</i></string>
     <string name="lokasi_satwa">Satwa ini berlokasi di Pulau Komodo, Flores</string>
     <string name="populasi_satwa">Populasinya berjumlah 3458</string>
     <string name="funfact_satwa">Funfact! Komodo dipercayai adalah naga purba</string>
