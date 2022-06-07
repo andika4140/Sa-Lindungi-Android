@@ -20,7 +20,6 @@ class ViewPagerFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentViewPagerBinding.inflate(inflater, container, false)
-
         val view = inflater.inflate(R.layout.fragment_view_pager, container, false)
 
         val fragmentlist = arrayListOf<Fragment>(
