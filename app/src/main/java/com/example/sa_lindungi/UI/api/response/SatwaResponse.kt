@@ -34,6 +34,9 @@ data class SatwaResponseItem(
 	@field:SerializedName("gambar")
 	val gambar: String? = null,
 
+	@field:SerializedName("gambar_lokasi")
+	val gambarLokasi: String? = null,
+
 	@field:SerializedName("updatedAt")
 	val updatedAt: String? = null
 

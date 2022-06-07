@@ -116,13 +116,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="36dp"
                 android:layout_marginEnd="16dp"
+                android:layout_marginTop="100dp"
                 android:backgroundTint="@color/yellow_button"
                 android:text="@string/donasi"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cv_lokasi_satwa" />
+                app:layout_constraintTop_toBottomOf="@+id/cv_funfact" />
 
             <!--            <androidx.cardview.widget.CardView-->
             <!--                android:id="@+id/cv_scientific"-->
@@ -265,15 +265,13 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="20dp"
                 android:backgroundTint="@color/dimmed_white"
-                app:cardCornerRadius="20dp"
                 app:cardElevation="0dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cv_populasi">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp">
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/tv_lokasi_title"
@@ -282,28 +280,17 @@
                         android:fontFamily="@font/poppins_semi_bold"
                         android:text="@string/lokasi_satwa_desc"
                         android:textColor="@color/main_color"
-                        android:textSize="18sp"
+                        android:textSize="15sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-
-                    <!--                    <TextView-->
-                    <!--                        android:id="@+id/tv_lokasi_satwa"-->
-                    <!--                        android:layout_width="match_parent"-->
-                    <!--                        android:layout_height="wrap_content"-->
-                    <!--                        android:layout_marginTop="8dp"-->
-                    <!--                        android:fontFamily="@font/roboto_light"-->
-                    <!--                        android:text="@string/lokasi_satwa"-->
-                    <!--                        android:textColor="@color/black"-->
-                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
-                    <!--                        app:layout_constraintStart_toStartOf="parent"-->
-                    <!--                        app:layout_constraintTop_toBottomOf="@+id/tv_lokasi_title" />-->
 
                     <ImageView
                         android:id="@+id/gambar_peta"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tv_lokasi_title"

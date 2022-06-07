@@ -84,6 +84,9 @@ class ResultActivity : AppCompatActivity() {
             .load(satwa.gambar)
             .centerCrop()
             .into(binding.ivSatwa)
+        Glide.with(this)
+            .load(satwa.gambarLokasi)
+            .into(binding.gambarPeta)
         binding.tvSatwaNameTitle.text = satwa.nama
         binding.tvNamaScientificTitle.text = satwa.namaSaintifik
         binding.tvLokasiTitle.text = satwa.lokasi
