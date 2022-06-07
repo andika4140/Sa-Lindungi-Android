@@ -47,4 +47,5 @@
     <string name="lokasi_satwa_desc">Lokasi Satwa</string>
     <string name="populasi_satwa_title">Populasi Satwa</string>
     <string name="fakta_menarik">Fakta Menarik</string>
+    <string name="finish">selesai</string>
 </resources>

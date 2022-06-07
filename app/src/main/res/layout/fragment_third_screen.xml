@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dimmed_white"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".UI.onboarding.screens.ThirdScreen">
 
     <ImageView
@@ -35,34 +35,35 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
-        android:textAlignment="center"
         android:text="@string/desc_onboarding3"
+        android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title3" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/finish"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginEnd="40dp"-->
-<!--        android:layout_marginBottom="40dp"-->
-<!--        android:text="Finish"-->
-<!--        android:textColor="@color/green_earth"-->
-<!--        android:textSize="22sp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/finish"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginEnd="40dp"-->
+    <!--        android:layout_marginBottom="40dp"-->
+    <!--        android:text="Finish"-->
+    <!--        android:textColor="@color/green_earth"-->
+    <!--        android:textSize="22sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent" />-->
 
     <Button
         android:id="@+id/button_finish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/main_color"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="60dp"
-        android:text="Finish"
+        android:backgroundTint="@color/yellow_button"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="@string/finish"
         android:textColor="@color/dimmed_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
