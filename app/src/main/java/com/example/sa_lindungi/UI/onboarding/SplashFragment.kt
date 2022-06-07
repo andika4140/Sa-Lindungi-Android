@@ -27,12 +27,13 @@ class SplashFragment : Fragment() {
                 val navOption = NavOptions.Builder()
                     .setLaunchSingleTop(true)
                     .build()
-                val direction = R.id.action_splashFragment_to_homeActivity
-                findNavController().navigate(direction)
+                val directionToHome = R.id.action_splashFragment_to_homeActivity
+                findNavController().navigate(directionToHome)
             } else {
-                findNavController().navigate(R.id.action_splashFragment_to_viewPagerFragment)
+                val directionToViewPager = R.id.action_splashFragment_to_viewPagerFragment
+                findNavController().navigate(directionToViewPager)
             }
-        }, 1000)
+        }, 2500)
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_splash, container, false)
     }
