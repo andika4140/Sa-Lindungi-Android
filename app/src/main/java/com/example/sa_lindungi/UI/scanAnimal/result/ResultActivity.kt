@@ -82,12 +82,13 @@ class ResultActivity : AppCompatActivity() {
     private fun setSatwaData(satwa: SatwaResponseItem) {
         Glide.with(this)
             .load(satwa.gambar)
+            .centerCrop()
             .into(binding.ivSatwa)
         binding.tvSatwaNameTitle.text = satwa.nama
-        binding.tvDeskripsi.text = "Nama scientific satwa ini adalah ${satwa.namaSaintifik}"
-        binding.tvLokasiSatwa.text = "Satwa ini terletak pada ${satwa.lokasi}"
+        binding.tvNamaScientificTitle.text = satwa.namaSaintifik
+        binding.tvLokasiTitle.text = satwa.lokasi
         binding.tvPopulasi.text = satwa.populasi
-        binding.tvFunfact.text = "Fakta menarik mengenai ${satwa.nama} yaitu ${satwa.funfact}"
+        binding.tvFunfact.text = satwa.funfact
     }
 
     private fun showLoading(isLoading: Boolean) {
