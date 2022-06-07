@@ -43,11 +43,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/poppins_semi_bold"
         android:gravity="top"
         android:text="@string/pilih_sumbe"
         android:textAppearance="@style/option_title"
+        android:textSize="17.5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +61,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/previewImageView"
+        app:layout_constraintTop_toBottomOf="@+id/cv_preview_image_view"
         app:srcCompat="@drawable/camera_button_2" />
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -71,21 +72,45 @@
         android:layout_marginEnd="32dp"
         android:src="@drawable/gallery_button_2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/previewImageView" />
+        app:layout_constraintTop_toBottomOf="@+id/cv_preview_image_view" />
 
-    <ImageView
-        android:id="@+id/previewImageView"
-        android:layout_width="260dp"
-        android:layout_height="285dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_preview_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pilih_sumbe"
-        app:layout_constraintVertical_bias="0.064"
-        app:srcCompat="@drawable/replacement_image_preview" />
+        app:layout_constraintTop_toBottomOf="@+id/pilih_sumbe">
+
+        <ImageView
+            android:id="@+id/preview_image_view"
+            android:layout_width="260dp"
+            android:layout_height="220dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pilih_sumbe"
+            app:srcCompat="@drawable/replacement_image_preview" />
+    </androidx.cardview.widget.CardView>
+
+<!--    <ImageView-->
+<!--        android:id="@+id/previewImageView"-->
+<!--        android:layout_width="260dp"-->
+<!--        android:layout_height="285dp"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/pilih_sumbe"-->
+<!--        app:layout_constraintVertical_bias="0.064"-->
+<!--        app:srcCompat="@drawable/replacement_image_preview" />-->
 
     <Button
         android:id="@+id/button_next"
