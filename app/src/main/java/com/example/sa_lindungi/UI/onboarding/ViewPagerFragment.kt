@@ -1,41 +1,74 @@
 package com.example.sa_lindungi.UI.onboarding
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.ActivityNavigator
+import androidx.navigation.NavOptions
+import androidx.navigation.fragment.findNavController
 import com.example.sa_lindungi.R
 import com.example.sa_lindungi.UI.onboarding.screens.FirstScreen
 import com.example.sa_lindungi.UI.onboarding.screens.SecondScreen
 import com.example.sa_lindungi.UI.onboarding.screens.ThirdScreen
+import com.example.sa_lindungi.databinding.FragmentThirdScreenBinding
 import com.example.sa_lindungi.databinding.FragmentViewPagerBinding
 import kotlinx.android.synthetic.main.fragment_view_pager.view.*
 
 class ViewPagerFragment : Fragment() {
-    private lateinit var binding : FragmentViewPagerBinding
+    private var _binding: FragmentViewPagerBinding? = null
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
+
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        binding = FragmentViewPagerBinding.inflate(inflater, container, false)
-        val view = inflater.inflate(R.layout.fragment_view_pager, container, false)
+        _binding = FragmentViewPagerBinding.inflate(inflater, container, false)
 
-        val fragmentlist = arrayListOf<Fragment>(
+        val fragmentLists = arrayListOf<Fragment>(
             FirstScreen(),
             SecondScreen(),
             ThirdScreen()
         )
 
         val adapter = ViewPagerAdapter(
-            fragmentlist,
+            fragmentLists,
             requireActivity().supportFragmentManager,
             lifecycle
         )
 
-        view.viewPager.adapter = adapter
-
+        binding.viewPager.adapter = adapter
+        val view = binding.root
         return view
     }
+//    private lateinit var binding : FragmentViewPagerBinding
+//    override fun onCreateView(
+//        inflater: LayoutInflater, container: ViewGroup?,
+//        savedInstanceState: Bundle?
+//    ): View? {
+//        // Inflate the layout for this fragment
+//        binding = FragmentViewPagerBinding.inflate(inflater, container, false)
+//        val view = inflater.inflate(R.layout.fragment_view_pager, container, false)
+//
+//        val fragmentlist = arrayListOf<Fragment>(
+//            FirstScreen(),
+//            SecondScreen(),
+//            ThirdScreen()
+//        )
+//
+//        val adapter = ViewPagerAdapter(
+//            fragmentlist,
+//            requireActivity().supportFragmentManager,
+//            lifecycle
+//        )
+//
+//        view.viewPager.adapter = adapter
+//
+//        return view
+//    }
 }

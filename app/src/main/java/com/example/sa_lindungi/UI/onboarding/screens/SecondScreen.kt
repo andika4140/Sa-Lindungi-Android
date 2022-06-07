@@ -33,11 +33,6 @@ class SecondScreen : Fragment() {
         val view = binding.root
         return view
     }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 //    private lateinit var binding : FragmentSecondScreenBinding
 //    override fun onCreateView(
 //        inflater: LayoutInflater, container: ViewGroup?,

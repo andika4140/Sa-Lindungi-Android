@@ -35,11 +35,10 @@ class FirstScreen : Fragment() {
         val view = binding.root
         return view
     }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
+//    override fun onDestroyView() {
+//        super.onDestroyView()
+//        _binding = null
+//    }
 //    private lateinit var binding : FragmentFirstScreenBinding
 //    fun onCreate(
 //        inflater: LayoutInflater, container: ViewGroup?,

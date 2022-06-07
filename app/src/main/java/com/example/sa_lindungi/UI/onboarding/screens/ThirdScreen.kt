@@ -49,11 +49,6 @@ class ThirdScreen : Fragment() {
 
         return view
     }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 //    private lateinit var binding : FragmentThirdScreenBinding
 //    override fun onCreateView(
 //        inflater: LayoutInflater, container: ViewGroup?,
