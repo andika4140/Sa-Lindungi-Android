@@ -12,19 +12,46 @@ import com.example.sa_lindungi.databinding.FragmentSecondScreenBinding
 import kotlinx.android.synthetic.main.fragment_second_screen.view.*
 
 class SecondScreen : Fragment() {
+    private var _binding: FragmentSecondScreenBinding? = null
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
+
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_second_screen, container, false)
+        _binding = FragmentSecondScreenBinding.inflate(inflater, container, false)
 
-        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)
-
-        view.button_next2.setOnClickListener{
+        //binding.name.text = viewModel.name
+        binding.buttonNext2.setOnClickListener {
+            val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)
             viewPager?.currentItem = 2
         }
 
+        val view = binding.root
         return view
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+//    private lateinit var binding : FragmentSecondScreenBinding
+//    override fun onCreateView(
+//        inflater: LayoutInflater, container: ViewGroup?,
+//        savedInstanceState: Bundle?
+//    ): View? {
+//        // Inflate the layout for this fragment
+//        val binding = FragmentSecondScreenBinding.inflate(inflater, container, false)
+//        //val view = inflater.inflate(R.layout.fragment_second_screen, container, false)
+//
+//        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)
+//
+//        binding.buttonNext2.setOnClickListener{
+//            viewPager?.currentItem = 2
+//        }
+//        return view
+//    }
 }
