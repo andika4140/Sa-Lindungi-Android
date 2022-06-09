@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
         android:gravity="center_horizontal|top"
-        android:text="@string/cek_status_donasi"
+        android:text="@string/donasi"
         android:fontFamily="@font/roboto_bold"
         android:textSize="27sp"
         android:textAppearance="@style/sa_lindungi_2"
