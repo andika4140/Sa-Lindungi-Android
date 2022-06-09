@@ -53,4 +53,8 @@
     <string name="bank">Bank</string>
     <string name="title_transaction">Isi datanya dulu yuk!</string>
     <string name="text_bank_available">Bank yang tersedia adalah BNI, BRI, dan BCA</string>
+    <string name="hint_et_email">Masukkan email anda</string>
+    <string name="hint_et_nominal">Masukkan nominal</string>
+    <string name="hint_et_bank">Masukkan nama bank yang tersedia</string>
+    <string name="checkout">checkout</string>
 </resources>

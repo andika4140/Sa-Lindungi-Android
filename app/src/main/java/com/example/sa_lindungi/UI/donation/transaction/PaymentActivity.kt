@@ -27,37 +27,38 @@ class PaymentActivity : AppCompatActivity() {
         setupAction()
     }
 
+    private fun setupViewModel() {
+        paymentViewModel = ViewModelProvider(
+            this
+        )[PaymentViewModel::class.java]
+    }
+
     private fun setupAction() {
-        binding.buttonDonasi.setOnClickListener {
-            val id = intent.getIntExtra(DonationDetailActivity.EXTRA_ID, 0)
+        val id = intent.getIntExtra(EXTRA_ID, 0)
+
+        binding.buttonPay.setOnClickListener {
             val email = binding.emailEditText.text.toString()
             val nominal = binding.nominalEditText.text.toString().toInt()
             val bank = binding.etBank.text.toString()
             when {
                 email.isEmpty() -> {
-                    binding.emailEditText.error = "Masukkan email"
+                    binding.emailEditTextLayout.error = "Masukkan email"
                 }
                 nominal == null -> {
-                    binding.nominalEditText.error = "Masukkan nominal transaksi"
+                    binding.nominalEditTextLayout.error = "Masukkan nominal transaksi"
                 }
                 bank.isEmpty() -> {
-                    binding.etBank.error = "Masukkan perusahaan bank"
+                    binding.etBankLayout.error = "Masukkan perusahaan bank"
                 }
                 !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> {
-                    binding.emailEditText.error = "Format email harus sesuai"
+                    binding.emailEditTextLayout.error = "Format email harus sesuai"
                 }
                 else -> {
-                    paymentViewModel.postTransaction(id,bank, email, nominal)
+                    paymentViewModel.postTransaction(id, bank, email, nominal)
                     Toast.makeText(this, "payment berhasil dan diproses", Toast.LENGTH_SHORT).show()
                 }
             }
         }
-    }
-
-    private fun setupViewModel() {
-        paymentViewModel = ViewModelProvider(
-            this
-        )[PaymentViewModel::class.java]
     }
 
     private fun setupView() {
