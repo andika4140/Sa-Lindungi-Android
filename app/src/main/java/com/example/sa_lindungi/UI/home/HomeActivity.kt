@@ -8,6 +8,7 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import com.example.sa_lindungi.R
 import com.example.sa_lindungi.UI.donation.DonationActivity
+import com.example.sa_lindungi.UI.donation.transaction.DonationCheckActivity
 import com.example.sa_lindungi.UI.scanAnimal.OptionActivity
 import com.example.sa_lindungi.databinding.ActivityHomeBinding
 
@@ -32,6 +33,11 @@ class HomeActivity : AppCompatActivity() {
             binding.buttonDonasi.setOnClickListener {
                 val intentToDonation = Intent(this, DonationActivity::class.java)
                 startActivity(intentToDonation)
+            }
+
+            binding.buttonDonasi.setOnClickListener {
+                val intentToCheckDonation = Intent(this, DonationCheckActivity::class.java)
+                startActivity(intentToCheckDonation)
             }
         }
 

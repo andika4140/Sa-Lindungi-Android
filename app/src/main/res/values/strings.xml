@@ -34,6 +34,17 @@
     <string name="donasi_website">Website dari organisasi</string>
     <string name="donasi_kontak">Kontak dari organisasi</string>
 
+    <string name="email">Email</string>
+    <string name="nominal">Nominal</string>
+    <string name="bank">Bank</string>
+    <string name="title_transaction">Isi datanya dulu yuk!</string>
+    <string name="text_bank_available">Bank yang tersedia adalah BNI, BRI, dan BCA</string>
+
+    <string name="cek_status_donasi">Cek Status Donasi</string>
+    <string name="cek_email_donasi">Masukkan alamat e-mail yang anda gunakan saat mendaftar donasi untuk cek status donasi anda!</string>
+    <string name="input_email_cek_donasi">E-mail</string>
+    <string name="submit">Submit</string>
+
     <string name="prediction">prediksi</string>
     <string name="website">donasi ke website</string>
     <string name="deskripsi">Deskripsi</string>
@@ -48,9 +59,4 @@
     <string name="populasi_satwa_title">Populasi Satwa</string>
     <string name="fakta_menarik">Fakta Menarik</string>
     <string name="finish">selesai</string>
-    <string name="email">Email</string>
-    <string name="nominal">Nominal</string>
-    <string name="bank">Bank</string>
-    <string name="title_transaction">Isi datanya dulu yuk!</string>
-    <string name="text_bank_available">Bank yang tersedia adalah BNI, BRI, dan BCA</string>
 </resources>
