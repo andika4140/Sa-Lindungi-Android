@@ -17,6 +17,9 @@
         android:theme="@style/Theme.SaLindungi"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".UI.donation.transaction.PaymentActivity"
+            android:exported="false" />
+        <activity
             android:name=".UI.donation.donationSatwa.DonationSatwaActivity"
             android:exported="false" />
         <activity

@@ -39,6 +39,28 @@ interface ApiService {
         @Path("id") id: Int
     ): Call<List<DonasiResponseItem>>
 
+    //post Transaction
+    @FormUrlEncoded
+    @POST("/transaksi")
+    fun postTransaction(
+        @Field("id") id: Int,
+        @Field("bank") bank: String,
+        @Field("email") email: String,
+        @Field("nominal") nominal: Int
+    ): Call<TransactionResponse>
+
+    //list transaction by email
+    @GET("/transaksi/email/{email}")
+    fun getListTransaction(
+        @Path("email") email: String
+    ): Call<TransactionListResponseItem>
+
+    //GET Transaction detail by id transaksi
+    @GET("/transaksi/status/{id}")
+    fun getTransactionDetail(
+        @Path("id") id: String
+    ): Call<TransactionDetailResponse>
+
 //    //satwa-donasi
 //    @GET("/satwa-donasi/satwa/{id}")
 //    fun getDonasiSatwa(

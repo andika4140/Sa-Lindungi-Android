@@ -38,6 +38,7 @@ class DonationAdapter(private val listDonation: ArrayList<DonasiResponseItem>) :
                 binding.tvDonasi.text = data.nama
                 binding.cardView.setOnClickListener {
                     val intentToDetail = Intent(itemView.context, DonationDetailActivity::class.java)
+                    intentToDetail.putExtra(DonationDetailActivity.EXTRA_ID, data.id)
                     intentToDetail.putExtra(DonationDetailActivity.EXTRA_NAMA, data.nama)
                     intentToDetail.putExtra(DonationDetailActivity.EXTRA_DESKRIPSI,data.deskripsi)
                     intentToDetail.putExtra(DonationDetailActivity.EXTRA_KONTAK, data.kontak)

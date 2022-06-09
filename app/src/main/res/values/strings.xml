@@ -48,4 +48,9 @@
     <string name="populasi_satwa_title">Populasi Satwa</string>
     <string name="fakta_menarik">Fakta Menarik</string>
     <string name="finish">selesai</string>
+    <string name="email">Email</string>
+    <string name="nominal">Nominal</string>
+    <string name="bank">Bank</string>
+    <string name="title_transaction">Isi datanya dulu yuk!</string>
+    <string name="text_bank_available">Bank yang tersedia adalah BNI, BRI, dan BCA</string>
 </resources>
