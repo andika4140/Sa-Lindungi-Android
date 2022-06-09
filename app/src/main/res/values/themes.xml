@@ -142,7 +142,7 @@
 
     <style name="home_title">
         <item name="android:textSize">
-            24sp
+            20sp
         </item>
         <item name="android:textColor">
             #61714D

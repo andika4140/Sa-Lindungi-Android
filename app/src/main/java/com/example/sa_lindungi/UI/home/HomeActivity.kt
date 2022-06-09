@@ -35,7 +35,7 @@ class HomeActivity : AppCompatActivity() {
                 startActivity(intentToDonation)
             }
 
-            binding.buttonDonasi.setOnClickListener {
+            binding.buttonCekDonasi.setOnClickListener {
                 val intentToCheckDonation = Intent(this, DonationCheckActivity::class.java)
                 startActivity(intentToCheckDonation)
             }

@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="62dp"
         android:layout_marginEnd="16dp"
         android:text="@string/home_title"
         android:textAppearance="@style/home_title"
@@ -89,12 +89,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button_kenali_satwa"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/button_kenali_satwa"
         app:layout_constraintTop_toBottomOf="@+id/button_kenali_satwa"
-        app:layout_constraintVertical_bias="0.033"
         app:srcCompat="@drawable/donasi" />
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -115,7 +113,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="316dp" />
+        app:layout_constraintGuide_begin="203dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
