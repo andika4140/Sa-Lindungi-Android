@@ -6,9 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
-import com.example.sa_lindungi.R
 import com.example.sa_lindungi.UI.donation.DonationActivity
-import com.example.sa_lindungi.UI.donation.DonationCheckActivity
 import com.example.sa_lindungi.UI.scanAnimal.OptionActivity
 import com.example.sa_lindungi.databinding.ActivityHomeBinding
 
@@ -31,14 +29,14 @@ class HomeActivity : AppCompatActivity() {
             }
 
             binding.buttonDonasi.setOnClickListener {
-                val intentToDonation = Intent(this, DonationCheckActivity::class.java)
+                val intentToDonation = Intent(this, DonationActivity::class.java)
                 startActivity(intentToDonation)
             }
 
-            binding.buttonCekDonasi.setOnClickListener {
-                val intentToCheckDonation = Intent(this, DonationActivity::class.java)
-                startActivity(intentToCheckDonation)
-            }
+//            binding.buttonCekDonasi.setOnClickListener {
+//                val intentToCheckDonation = Intent(this, DonationCheckActivity::class.java)
+//                startActivity(intentToCheckDonation)
+//            }
         }
     }
 
