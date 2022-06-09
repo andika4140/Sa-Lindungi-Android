@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_app_other"
-    tools:context=".UI.scanAnimal.result.ResultActivity">
+    android:background="@drawable/bg_app_other" >
 
     <TextView
         android:id="@+id/donasi_result"
@@ -15,9 +14,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
         android:gravity="center_horizontal|top"
-        android:text="@string/donasi"
+        android:text="@string/cek_status_donasi"
         android:fontFamily="@font/roboto_bold"
-        android:textSize="33sp"
+        android:textSize="27sp"
         android:textAppearance="@style/sa_lindungi_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"

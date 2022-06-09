@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_app_other"
-    tools:context=".UI.scanAnimal.result.ResultActivity">
+    android:background="@drawable/bg_app_other" >
 
     <TextView
         android:id="@+id/donasi_check"
