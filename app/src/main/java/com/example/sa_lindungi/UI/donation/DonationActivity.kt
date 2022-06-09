@@ -7,14 +7,10 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.sa_lindungi.R
 import com.example.sa_lindungi.UI.api.response.DonasiResponseItem
 import com.example.sa_lindungi.UI.home.HomeActivity
-import com.example.sa_lindungi.UI.home.MainActivity
 import com.example.sa_lindungi.databinding.ActivityDonationBinding
 
 class DonationActivity : AppCompatActivity() {

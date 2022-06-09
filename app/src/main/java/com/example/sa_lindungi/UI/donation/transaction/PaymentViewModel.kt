@@ -11,7 +11,6 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class PaymentViewModel : ViewModel() {
-
     private val _id = MutableLiveData<Int>()
     val id: LiveData<Int> = _id
 
