@@ -108,7 +108,7 @@
         app:layout_constraintStart_toStartOf="@+id/button_donasi"
         app:layout_constraintTop_toBottomOf="@+id/button_donasi"
         app:layout_constraintVertical_bias="0.033"
-        app:srcCompat="@drawable/donasi" />
+        app:srcCompat="@drawable/cek_donasi" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -117,4 +117,3 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="316dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
-
