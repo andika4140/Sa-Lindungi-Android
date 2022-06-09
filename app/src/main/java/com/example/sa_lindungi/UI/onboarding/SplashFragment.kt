@@ -33,7 +33,7 @@ class SplashFragment : Fragment() {
                 val directionToViewPager = R.id.action_splashFragment_to_viewPagerFragment
                 findNavController().navigate(directionToViewPager)
             }
-        }, 2500)
+        }, 1000)
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_splash, container, false)
     }
