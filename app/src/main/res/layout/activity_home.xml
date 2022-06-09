@@ -97,6 +97,19 @@
         app:layout_constraintVertical_bias="0.033"
         app:srcCompat="@drawable/donasi" />
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/button_cek_donasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button_donasi"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button_donasi"
+        app:layout_constraintTop_toBottomOf="@+id/button_donasi"
+        app:layout_constraintVertical_bias="0.033"
+        app:srcCompat="@drawable/cek_donasi" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
