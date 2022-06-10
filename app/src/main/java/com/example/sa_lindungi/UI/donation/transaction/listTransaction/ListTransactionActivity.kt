@@ -1,5 +1,6 @@
 package com.example.sa_lindungi.UI.donation.transaction.listTransaction
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +11,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sa_lindungi.UI.api.response.TransactionListResponseItem
+import com.example.sa_lindungi.UI.donation.donationDetail.DonationDetailActivity
+import com.example.sa_lindungi.UI.donation.transaction.DonationCheckActivity
+import com.example.sa_lindungi.UI.home.HomeActivity
 import com.example.sa_lindungi.databinding.ActivityListTransactionBinding
 
 class ListTransactionActivity : AppCompatActivity() {
@@ -30,6 +34,12 @@ class ListTransactionActivity : AppCompatActivity() {
     private fun setupAction() {
         val layoutManager = LinearLayoutManager(this)
         binding.rvTransaksi.layoutManager = layoutManager
+
+        binding.backButton.setOnClickListener {
+            val intentToDonationDetail = Intent(this, DonationDetailActivity::class.java)
+            intentToDonationDetail.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            finish()
+        }
     }
 
     private fun setupViewModel() {

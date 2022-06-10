@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.sa_lindungi.UI.api.ApiConfig
 import com.example.sa_lindungi.UI.api.response.TransactionResponse
 import com.example.sa_lindungi.UI.donation.transaction.status.DonationStatusActivity
+import com.example.sa_lindungi.UI.home.HomeActivity
 import com.example.sa_lindungi.databinding.ActivityPaymentBinding
 import retrofit2.Call
 import retrofit2.Callback
@@ -41,10 +42,16 @@ class PaymentActivity : AppCompatActivity() {
     private fun setupAction() {
         val id = intent.getIntExtra(EXTRA_ID, 0)
 
+        binding.backButton.setOnClickListener {
+            val intentToHome = Intent(this, HomeActivity::class.java)
+            intentToHome.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            finish()
+        }
+
         binding.buttonPay.setOnClickListener {
             val email = binding.emailEditText.text.toString()
             val nominal = binding.nominalEditText.text.toString()
-            val bank = binding.etBank.text.toString()
+            val bank = binding.etBank.text.toString().lowercase()
             when {
                 email.isEmpty() -> {
                     binding.emailEditTextLayout.error = "Masukkan email"
@@ -54,6 +61,9 @@ class PaymentActivity : AppCompatActivity() {
                 }
                 bank.isEmpty() -> {
                     binding.etBankLayout.error = "Masukkan perusahaan bank"
+                }
+                bank != "bca" && bank != "bri" && bank != "bni"-> {
+                    binding.etBankLayout.error = "Masukkan perusahaan bank yang tersedia"
                 }
                 !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> {
                     binding.emailEditTextLayout.error = "Format email harus sesuai"

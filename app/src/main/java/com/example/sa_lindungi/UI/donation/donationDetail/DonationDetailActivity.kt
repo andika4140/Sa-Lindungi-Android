@@ -10,9 +10,11 @@ import android.view.WindowManager
 import androidx.appcompat.app.AlertDialog
 import com.bumptech.glide.Glide
 import com.example.sa_lindungi.R
+import com.example.sa_lindungi.UI.donation.DonationActivity
 import com.example.sa_lindungi.UI.donation.transaction.PaymentActivity
 import com.example.sa_lindungi.UI.home.HomeActivity
 import com.example.sa_lindungi.UI.home.MainActivity
+import com.example.sa_lindungi.UI.scanAnimal.result.ResultActivity
 import com.example.sa_lindungi.databinding.ActivityDonationDetailBinding
 import com.google.gson.annotations.SerializedName
 
@@ -39,6 +41,12 @@ class DonationDetailActivity : AppCompatActivity() {
         val website = intent.getStringExtra(EXTRA_WEBSITE)
         val rekening = intent.getStringExtra(EXTRA_REKENING)
         val gambar = intent.getStringExtra(EXTRA_GAMBAR)
+
+        binding.backButton.setOnClickListener {
+            val intentToDonation = Intent(this, DonationActivity::class.java)
+            intentToDonation.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            finish()
+        }
 
         binding.apply {
             tvDonasi.text = name

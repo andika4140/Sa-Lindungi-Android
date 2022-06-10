@@ -16,14 +16,14 @@
         android:elevation="6dp"
         android:padding="16dp">
 
-<!--        <ImageView-->
-<!--            android:id="@+id/iv_avatar"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="200dp"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            tools:src="@drawable/replacement_image_preview" />-->
+        <!--        <ImageView-->
+        <!--            android:id="@+id/iv_avatar"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="200dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            tools:src="@drawable/replacement_image_preview" />-->
 
         <TextView
             android:id="@+id/tv_donasi"
@@ -39,24 +39,52 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/status"
+            android:textColor="@color/black_description"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_donasi"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_nominal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="right"
+            android:text="@string/nominal"
+            android:textColor="@color/black_description"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_status" />
+
+        <TextView
             android:id="@+id/tv_tgl_transaksi_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins_semi_bold"
             android:text="@string/title_time"
             android:textSize="12sp"
-            android:fontFamily="@font/poppins_semi_bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_donasi" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_nominal" />
 
         <TextView
             android:id="@+id/tv_tgl_transaksi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semi_bold"
             android:text="@string/time"
             android:textSize="12sp"
-            android:fontFamily="@font/poppins_semi_bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_tgl_transaksi_title" />

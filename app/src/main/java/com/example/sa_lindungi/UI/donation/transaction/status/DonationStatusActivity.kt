@@ -11,7 +11,9 @@ import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import com.example.sa_lindungi.R
 import com.example.sa_lindungi.UI.api.response.TransactionDetailResponse
+import com.example.sa_lindungi.UI.donation.transaction.listTransaction.ListTransactionActivity
 import com.example.sa_lindungi.UI.home.HomeActivity
+import com.example.sa_lindungi.UI.scanAnimal.result.ResultActivity
 import com.example.sa_lindungi.databinding.ActivityDonationStatusBinding
 
 class DonationStatusActivity : AppCompatActivity() {
@@ -27,6 +29,13 @@ class DonationStatusActivity : AppCompatActivity() {
         setupViewModel()
 
         binding.buttonHome.setOnClickListener { toHome() }
+        binding.backButton.setOnClickListener { toBack() }
+    }
+
+    private fun toBack() {
+//        val intentToListTransaction = Intent(this, ListTransactionActivity::class.java)
+//        intentToListTransaction.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+        finish()
     }
 
     private fun toHome() {
@@ -66,10 +75,10 @@ class DonationStatusActivity : AppCompatActivity() {
     private fun setStatusDonationData(statusDonation: TransactionDetailResponse) {
         binding.apply {
             bank.text = statusDonation.bank
-            idPembayaran.text = statusDonation.id
-            email.text = statusDonation.email
+            idPembayaran.text = "ID Pembayaran\n${statusDonation.id}"
+            email.text = "Email\n${statusDonation.email}"
             vaNumber.text = statusDonation.vaNumber
-            nominal.text = "Rp${statusDonation.grossAmount}"
+            nominal.text = "Total Pembayaran\nRp${statusDonation.grossAmount}"
             namaDonasi.text = statusDonation.donasi
             time.text = statusDonation.transactionTime
             expired.text = statusDonation.transactionExpired

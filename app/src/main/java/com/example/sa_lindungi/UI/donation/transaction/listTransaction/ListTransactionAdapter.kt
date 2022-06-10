@@ -29,6 +29,8 @@ class ListTransactionAdapter(private val listTransaction: ArrayList<TransactionL
                 binding.apply {
                     tvDonasi.text = data.donasi
                     tvTglTransaksi.text = data.transactionTime
+                    tvStatus.text = "Status: ${data.transactionStatus}"
+                    tvNominal.text = "Rp${data.grossAmount}"
                     cardView.setOnClickListener {
                         val intentToStatus = Intent(itemView.context, DonationStatusActivity::class.java)
                         intentToStatus.putExtra(DonationStatusActivity.EXTRA_ID, data.id)

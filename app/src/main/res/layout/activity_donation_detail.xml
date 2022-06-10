@@ -8,6 +8,17 @@
     android:orientation="vertical"
     tools:context=".UI.donation.donationDetail.DonationDetailActivity">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="19dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:tint="@color/dimmed_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/donasi"
         android:layout_width="wrap_content"
@@ -22,7 +33,7 @@
         android:textSize="33sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/back_button"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
