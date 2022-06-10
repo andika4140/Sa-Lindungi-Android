@@ -43,13 +43,13 @@ class PaymentActivity : AppCompatActivity() {
 
         binding.buttonPay.setOnClickListener {
             val email = binding.emailEditText.text.toString()
-            val nominal = binding.nominalEditText.text.toString().toInt()
+            val nominal = binding.nominalEditText.text.toString()
             val bank = binding.etBank.text.toString()
             when {
                 email.isEmpty() -> {
                     binding.emailEditTextLayout.error = "Masukkan email"
                 }
-                nominal == null -> {
+                nominal.isEmpty() -> {
                     binding.nominalEditTextLayout.error = "Masukkan nominal transaksi"
                 }
                 bank.isEmpty() -> {
@@ -60,7 +60,7 @@ class PaymentActivity : AppCompatActivity() {
                 }
                 else -> {
 //                    paymentViewModel.postTransaction(id, bank, email, nominal)
-                    val service = ApiConfig.getApiService().postTransaction(id, bank, email, nominal)
+                    val service = ApiConfig.getApiService().postTransaction(id, bank, email, nominal.toInt())
                     service.enqueue(object : Callback<TransactionResponse> {
                         override fun onResponse(
                             call: Call<TransactionResponse>,
