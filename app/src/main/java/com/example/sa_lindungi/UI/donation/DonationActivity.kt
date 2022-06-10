@@ -33,7 +33,6 @@ class DonationActivity : AppCompatActivity() {
             intentToHome.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
             finish()
         }
-
         val layoutManager = LinearLayoutManager(this)
         binding.rvDonasi.layoutManager = layoutManager
 //        val itemDecoration = DividerItemDecoration(this, layoutManager.orientation)

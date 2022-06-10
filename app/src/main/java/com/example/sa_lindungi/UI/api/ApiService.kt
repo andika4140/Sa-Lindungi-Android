@@ -53,7 +53,7 @@ interface ApiService {
     @GET("/transaksi/email/{email}")
     fun getListTransaction(
         @Path("email") email: String
-    ): Call<TransactionListResponseItem>
+    ): Call<List<TransactionListResponseItem>>
 
     //GET Transaction detail by id transaksi
     @GET("/transaksi/status/{id}")
@@ -61,9 +61,4 @@ interface ApiService {
         @Path("id") id: String
     ): Call<TransactionDetailResponse>
 
-//    //satwa-donasi
-//    @GET("/satwa-donasi/satwa/{id}")
-//    fun getDonasiSatwa(
-//        @Path("id") id: Int
-//    ): Call<Donasi>
 }

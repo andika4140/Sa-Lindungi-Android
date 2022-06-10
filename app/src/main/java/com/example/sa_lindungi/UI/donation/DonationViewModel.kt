@@ -5,7 +5,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.sa_lindungi.UI.api.ApiConfig
-import com.example.sa_lindungi.UI.api.response.DonasiResponse
 import com.example.sa_lindungi.UI.api.response.DonasiResponseItem
 import retrofit2.Call
 import retrofit2.Callback
