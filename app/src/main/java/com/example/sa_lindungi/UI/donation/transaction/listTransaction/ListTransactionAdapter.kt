@@ -1,9 +1,11 @@
 package com.example.sa_lindungi.UI.donation.transaction.listTransaction
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sa_lindungi.UI.api.response.TransactionListResponseItem
+import com.example.sa_lindungi.UI.donation.transaction.status.DonationStatusActivity
 import com.example.sa_lindungi.databinding.ItemTransactionBinding
 
 class ListTransactionAdapter(private val listTransaction: ArrayList<TransactionListResponseItem>) :
@@ -27,6 +29,11 @@ class ListTransactionAdapter(private val listTransaction: ArrayList<TransactionL
                 binding.apply {
                     tvDonasi.text = data.donasi
                     tvTglTransaksi.text = data.transactionTime
+                    cardView.setOnClickListener {
+                        val intentToStatus = Intent(itemView.context, DonationStatusActivity::class.java)
+                        intentToStatus.putExtra(DonationStatusActivity.EXTRA_ID, data.id)
+                        itemView.context.startActivity(intentToStatus)
+                    }
                 }
             }
         }

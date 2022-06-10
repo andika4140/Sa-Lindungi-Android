@@ -69,7 +69,7 @@ class DonationStatusActivity : AppCompatActivity() {
             idPembayaran.text = statusDonation.id
             email.text = statusDonation.email
             vaNumber.text = statusDonation.vaNumber
-            nominal.text = statusDonation.grossAmount
+            nominal.text = "Rp${statusDonation.grossAmount}"
             namaDonasi.text = statusDonation.donasi
             time.text = statusDonation.transactionTime
             expired.text = statusDonation.transactionExpired
