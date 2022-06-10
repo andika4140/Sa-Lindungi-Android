@@ -18,18 +18,23 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".UI.donation.donationSatwa.DonationSatwaActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".UI.home.HomeActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".UI.donation.donationDetail.DonationDetailActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".UI.donation.DonationActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".UI.scanAnimal.result.ResultActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".UI.scanAnimal.PreviewActivity"
@@ -39,9 +44,11 @@
             android:exported="false" />
         <activity
             android:name=".UI.scanAnimal.OptionActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".UI.home.MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
