@@ -11,29 +11,27 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class PaymentViewModel : ViewModel() {
-    private val _id = MutableLiveData<Int>()
-    val id: LiveData<Int> = _id
 
-    fun postTransaction(id: Int, bank: String, email: String, nominal: Int) {
-        val service = ApiConfig.getApiService().postTransaction(id, bank, email, nominal)
-        service.enqueue(object : Callback<TransactionResponse> {
-            override fun onResponse(
-                call: Call<TransactionResponse>,
-                response: Response<TransactionResponse>
-            ) {
-                if (response.isSuccessful) {
-                    Log.d(TAG, "onSuccess: ${response.message()}")
-                } else {
-                    Log.d(TAG, "onFailure: ${response.message()}")
-                }
-            }
-
-            override fun onFailure(call: Call<TransactionResponse>, t: Throwable) {
-                Log.d(TAG, "onFailure: ${t.message}")
-            }
-
-        })
-    }
+//    fun postTransaction(id: Int, bank: String, email: String, nominal: Int) {
+//        val service = ApiConfig.getApiService().postTransaction(id, bank, email, nominal)
+//        service.enqueue(object : Callback<TransactionResponse> {
+//            override fun onResponse(
+//                call: Call<TransactionResponse>,
+//                response: Response<TransactionResponse>
+//            ) {
+//                if (response.isSuccessful) {
+//                    Log.d(TAG, "onSuccess: ${response.message()}")
+//                } else {
+//                    Log.d(TAG, "onFailure: ${response.message()}")
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<TransactionResponse>, t: Throwable) {
+//                Log.d(TAG, "onFailure: ${t.message}")
+//            }
+//
+//        })
+//    }
 
     companion object {
         private const val TAG = "PaymentViewModel"

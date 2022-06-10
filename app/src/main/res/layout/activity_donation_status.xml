@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_app_other"
-    tools:context=".UI.donation.transaction.DonationStatusActivity" >
+    tools:context=".UI.donation.transaction.status.DonationStatusActivity" >
 
     <TextView
         android:id="@+id/donasi_result"

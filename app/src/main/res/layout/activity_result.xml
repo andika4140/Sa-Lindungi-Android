@@ -300,7 +300,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    // cek
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"

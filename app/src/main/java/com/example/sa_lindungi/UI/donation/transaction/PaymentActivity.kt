@@ -1,5 +1,6 @@
 package com.example.sa_lindungi.UI.donation.transaction
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,9 +10,13 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.example.sa_lindungi.R
-import com.example.sa_lindungi.UI.donation.donationDetail.DonationDetailActivity
+import com.example.sa_lindungi.UI.api.ApiConfig
+import com.example.sa_lindungi.UI.api.response.TransactionResponse
+import com.example.sa_lindungi.UI.donation.transaction.status.DonationStatusActivity
 import com.example.sa_lindungi.databinding.ActivityPaymentBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class PaymentActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPaymentBinding
@@ -54,7 +59,27 @@ class PaymentActivity : AppCompatActivity() {
                     binding.emailEditTextLayout.error = "Format email harus sesuai"
                 }
                 else -> {
-                    paymentViewModel.postTransaction(id, bank, email, nominal)
+//                    paymentViewModel.postTransaction(id, bank, email, nominal)
+                    val service = ApiConfig.getApiService().postTransaction(id, bank, email, nominal)
+                    service.enqueue(object : Callback<TransactionResponse> {
+                        override fun onResponse(
+                            call: Call<TransactionResponse>,
+                            response: Response<TransactionResponse>
+                        ) {
+                            if (response.isSuccessful) {
+                                val id = response.body()?.id
+                                Log.d(TAG, "onSuccess: ${response.message()}")
+                                val intentToStatus = Intent(this@PaymentActivity, DonationStatusActivity::class.java)
+                                intentToStatus.putExtra(DonationStatusActivity.EXTRA_ID, id)
+                                startActivity(intentToStatus)
+                            } else {
+                                Log.d(TAG, "onFailure: ${response.message()}")
+                            }
+                        }
+                        override fun onFailure(call: Call<TransactionResponse>, t: Throwable) {
+                            Log.d(TAG, "onFailure: ${t.message}")
+                        }
+                    })
                     Toast.makeText(this, "payment berhasil dan diproses", Toast.LENGTH_SHORT).show()
                 }
             }
