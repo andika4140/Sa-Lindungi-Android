@@ -148,25 +148,23 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/et_bank_layout"
-        android:alpha="1"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+        android:id="@+id/dropdown_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
+        android:hint="@string/choose_bank"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_bank_description">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_bank"
+        <AutoCompleteTextView
+            android:id="@+id/dropdown"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAllCaps="false"
-            android:ems="10"
-            android:hint="@string/hint_et_bank"
-            android:inputType="text" />
+            android:layout_height="match_parent"
+            android:inputType="none" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -184,7 +182,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_bank_layout" />
+        app:layout_constraintTop_toBottomOf="@+id/dropdown_layout" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"

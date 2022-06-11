@@ -8,8 +8,10 @@ import android.util.Log
 import android.util.Patterns
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import com.example.sa_lindungi.R
 import com.example.sa_lindungi.UI.api.ApiConfig
 import com.example.sa_lindungi.UI.api.response.TransactionResponse
 import com.example.sa_lindungi.UI.donation.transaction.status.DonationStatusActivity
@@ -30,6 +32,7 @@ class PaymentActivity : AppCompatActivity() {
 
         setupView()
         setupViewModel()
+        setupDropdown()
         setupAction()
     }
 
@@ -51,7 +54,7 @@ class PaymentActivity : AppCompatActivity() {
         binding.buttonPay.setOnClickListener {
             val email = binding.emailEditText.text.toString()
             val nominal = binding.nominalEditText.text.toString()
-            val bank = binding.etBank.text.toString().lowercase()
+            val bank = binding.dropdown.text.toString()
             when {
                 email.isEmpty() -> {
                     binding.emailEditTextLayout.error = "Masukkan email"
@@ -60,10 +63,7 @@ class PaymentActivity : AppCompatActivity() {
                     binding.nominalEditTextLayout.error = "Masukkan nominal transaksi"
                 }
                 bank.isEmpty() -> {
-                    binding.etBankLayout.error = "Masukkan perusahaan bank"
-                }
-                bank != "bca" && bank != "bri" && bank != "bni"-> {
-                    binding.etBankLayout.error = "Masukkan perusahaan bank yang tersedia"
+                    binding.dropdownLayout.error = "Pilih bank terlebih dahulu"
                 }
                 !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> {
                     binding.emailEditTextLayout.error = "Format email harus sesuai"
@@ -94,6 +94,12 @@ class PaymentActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    private fun setupDropdown() {
+        val bankList = listOf("bca", "bni", "bri")
+        val adapterDropdown = ArrayAdapter(this, R.layout.item_bank, bankList)
+        binding.dropdown.setAdapter(adapterDropdown)
     }
 
     private fun setupView() {
