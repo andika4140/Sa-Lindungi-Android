@@ -17,6 +17,22 @@
         android:theme="@style/Theme.SaLindungi"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".UI.donation.transaction.listTransaction.ListTransactionActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".UI.donation.transaction.status.DonationStatusActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".UI.donation.transaction.DonationCheckActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".UI.donation.transaction.PaymentActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
             android:name=".UI.donation.donationSatwa.DonationSatwaActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
@@ -37,9 +53,6 @@
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".UI.scanAnimal.PreviewActivity"
-            android:exported="false" />
-        <activity
             android:name=".UI.scanAnimal.CameraActivity"
             android:exported="false" />
         <activity
@@ -48,8 +61,8 @@
             android:exported="false" />
         <activity
             android:name=".UI.home.MainActivity"
-            android:screenOrientation="portrait"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
