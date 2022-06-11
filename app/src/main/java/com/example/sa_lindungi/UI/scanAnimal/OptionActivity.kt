@@ -177,8 +177,6 @@ class OptionActivity : AppCompatActivity() {
                 .load(result)
                 .centerCrop()
                 .into(binding.previewImageView)
-
-//            binding.previewImageView.setImageBitmap(result)
         }
     }
 
@@ -195,8 +193,6 @@ class OptionActivity : AppCompatActivity() {
                 .load(selectedImg)
                 .centerCrop()
                 .into(binding.previewImageView)
-
-//            binding.previewImageView.setImageURI(selectedImg)
         }
     }
 

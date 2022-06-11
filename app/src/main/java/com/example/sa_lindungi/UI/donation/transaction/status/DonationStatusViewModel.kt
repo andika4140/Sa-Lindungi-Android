@@ -37,10 +37,8 @@ class DonationStatusViewModel : ViewModel() {
                 _isLoading.value = false
                 Log.e(TAG, "onFailure: ${t.message}")
             }
-
         })
     }
-
 
     companion object {
         private const val TAG = "DonationStatusViewModel"

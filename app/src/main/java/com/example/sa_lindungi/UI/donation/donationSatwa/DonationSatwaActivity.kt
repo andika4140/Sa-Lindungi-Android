@@ -40,8 +40,6 @@ class DonationSatwaActivity : AppCompatActivity() {
 
         val layoutManager = LinearLayoutManager(this)
         binding.rvDonasi.layoutManager = layoutManager
-//        val itemDecoration = DividerItemDecoration(this, layoutManager.orientation)
-//        binding.rvDonasi.addItemDecoration(itemDecoration)
     }
 
     private fun setupViewModel() {

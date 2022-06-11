@@ -39,5 +39,4 @@ class ListTransactionAdapter(private val listTransaction: ArrayList<TransactionL
                 }
             }
         }
-
 }

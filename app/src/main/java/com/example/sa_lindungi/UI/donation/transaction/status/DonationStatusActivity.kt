@@ -33,8 +33,6 @@ class DonationStatusActivity : AppCompatActivity() {
     }
 
     private fun toBack() {
-//        val intentToListTransaction = Intent(this, ListTransactionActivity::class.java)
-//        intentToListTransaction.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         finish()
     }
 

@@ -28,7 +28,6 @@ class DonationDetailActivity : AppCompatActivity() {
 
         setupView()
         setupAction()
-
     }
 
     private fun setupAction() {
@@ -117,5 +116,4 @@ class DonationDetailActivity : AppCompatActivity() {
         const val EXTRA_DESKRIPSI = "extra_deskripsi"
         const val EXTRA_GAMBAR = "extra_gambar"
     }
-
 }

@@ -69,7 +69,6 @@ class PaymentActivity : AppCompatActivity() {
                     binding.emailEditTextLayout.error = "Format email harus sesuai"
                 }
                 else -> {
-//                    paymentViewModel.postTransaction(id, bank, email, nominal)
                     val service = ApiConfig.getApiService().postTransaction(id, bank, email, nominal.toInt())
                     service.enqueue(object : Callback<TransactionResponse> {
                         override fun onResponse(

@@ -60,5 +60,4 @@ interface ApiService {
     fun getTransactionDetail(
         @Path("id") id: String
     ): Call<TransactionDetailResponse>
-
 }

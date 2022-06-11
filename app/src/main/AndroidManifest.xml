@@ -53,9 +53,6 @@
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".UI.scanAnimal.PreviewActivity"
-            android:exported="false" />
-        <activity
             android:name=".UI.scanAnimal.CameraActivity"
             android:exported="false" />
         <activity

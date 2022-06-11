@@ -146,7 +146,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_bank" />
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/dropdown_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -164,9 +163,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="none" />
-
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <Button
         android:id="@+id/button_pay"
@@ -190,5 +187,4 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="79dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

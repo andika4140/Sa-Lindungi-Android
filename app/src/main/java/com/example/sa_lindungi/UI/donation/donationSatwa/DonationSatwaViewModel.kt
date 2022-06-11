@@ -22,8 +22,6 @@ class DonationSatwaViewModel : ViewModel() {
     fun getListDonation(id: Int) {
         _isLoading.value = true
         val client = ApiConfig.getApiService().getSatwaDonasi(id)
-//        client.enqueue(object : Callback<List<DonasiResponseItem>> {
-//        })
         client.enqueue(object : Callback<List<DonasiResponseItem>> {
             override fun onResponse(
                 call: Call<List<DonasiResponseItem>>,
@@ -47,5 +45,4 @@ class DonationSatwaViewModel : ViewModel() {
     companion object {
         private const val TAG = "DonationDetailSatwa"
     }
-
 }
