@@ -20,13 +20,6 @@ class SplashFragment : Fragment() {
     ): View? {
         Handler().postDelayed({
             if (onboardingFinished()) {
-                val extras = ActivityNavigator.Extras.Builder()
-                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    .build()
-                val navOption = NavOptions.Builder()
-                    .setLaunchSingleTop(true)
-                    .build()
                 val directionToHome = R.id.action_splashFragment_to_homeActivity
                 findNavController().navigate(directionToHome)
             } else {
@@ -34,7 +27,6 @@ class SplashFragment : Fragment() {
                 findNavController().navigate(directionToViewPager)
             }
         }, 1000)
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_splash, container, false)
     }
 

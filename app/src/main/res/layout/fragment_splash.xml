@@ -7,22 +7,6 @@
     tools:context=".UI.onboarding.SplashFragment"
     android:background="@color/dimmed_white">
 
-<!--    <TextView-->
-<!--        android:id="@+id/sa_lindungi"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentLeft="true"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_marginTop="168dp"-->
-<!--        android:gravity="center_horizontal|top"-->
-<!--        android:text="@string/sa_lindungi"-->
-<!--        android:fontFamily="@font/roboto_medium"-->
-<!--        android:textAppearance="@style/sa_lindungi"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.497"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
     <ImageView
         android:id="@+id/splash_image"
         android:layout_width="260dp"
@@ -39,5 +23,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.457"
         app:srcCompat="@drawable/logo_sa_lindungi" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

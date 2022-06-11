@@ -29,8 +29,6 @@ class ResultActivity : AppCompatActivity() {
         setupViewModel()
 
         binding.buttonHome.setOnClickListener { toHome() }
-//        binding.buttonDonasi.setOnClickListener { toDonation() }
-
     }
 
     private fun setupViewModel() {
@@ -42,7 +40,6 @@ class ResultActivity : AppCompatActivity() {
 
         binding.buttonDonasi.setOnClickListener {
             val intentToDonation = Intent(this, DonationSatwaActivity::class.java)
-//        intentToMain.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
             intentToDonation.putExtra(DonationSatwaActivity.EXTRA_ID, id)
             startActivity(intentToDonation)
             finish()

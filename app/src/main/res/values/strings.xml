@@ -34,13 +34,42 @@
     <string name="donasi_website">Website dari organisasi</string>
     <string name="donasi_kontak">Kontak dari organisasi</string>
 
-    <string name="cek_status_donasi">Cek Status Donasi</string>
+    <string name="email">Email</string>
+    <string name="nominal">Nominal</string>
+    <string name="bank">Bank</string>
+    <string name="title_transaction">Isi datanya dulu yuk!</string>
+    <string name="text_bank_available">Bank yang tersedia adalah BNI, BRI, dan BCA</string>
+    <string name="hint_et_email">Masukkan email anda</string>
+    <string name="hint_et_nominal">Masukkan nominal</string>
+    <string name="hint_et_bank">Masukkan nama bank yang tersedia</string>
+    <string name="checkout">checkout</string>
+
+    <string name="cek_status_donasi">Status Pembayaran</string>
     <string name="cek_email_donasi">Masukkan alamat e-mail yang anda gunakan saat mendaftar donasi untuk cek status donasi anda!</string>
     <string name="input_email_cek_donasi">E-mail</string>
     <string name="submit">Submit</string>
 
-    <string name="prediction">prediksi</string>
-    <string name="website">donasi ke website</string>
+    <string name="title_id_pembayaran">Invoice</string>
+    <string name="id_pembayaran">1234567890</string>
+    <string name="title_email">Email</string>
+    <string name="email2">donasi@gmail.com</string>
+    <string name="title_nama_donasi">Nama Donasi</string>
+    <string name="nama_donasi2">KitaBisa x Dicoding</string>
+    <string name="title_nominal">Nominal Uang yang Dibayarkan</string>
+    <string name="nominal2">150000</string>
+    <string name="title_bank">Rekening Pembayaran</string>
+    <string name="bank2">BRI</string>
+    <string name="title_va_number">VA Number (Nomor Rekening Tujuan Pembayaran)</string>
+    <string name="va_number">1234567890</string>
+    <string name="title_time">Tanggal dan Waktu Transaksi</string>
+    <string name="time">10 Juni 2022</string>
+    <string name="title_expired">Batas Waktu Pembayaran</string>
+    <string name="expired">20 Juni 2022</string>
+    <string name="title_status">Status Pembayaran</string>
+    <string name="status">Settlement</string>
+
+    <string name="prediction">Prediksi</string>
+    <string name="website">Donasi Sekarang!</string>
     <string name="deskripsi">Deskripsi</string>
     <string name="lokasi">Lokasi</string>
     <string name="rekening">Rekening</string>
@@ -53,4 +82,6 @@
     <string name="populasi_satwa_title">Populasi Satwa</string>
     <string name="fakta_menarik">Fakta Menarik</string>
     <string name="finish">selesai</string>
+    <string name="list_transaki">List Transaksi</string>
+    <string name="choose_bank">Pilih bank</string>
 </resources>

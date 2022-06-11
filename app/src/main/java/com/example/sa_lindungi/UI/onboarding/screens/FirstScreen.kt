@@ -15,8 +15,6 @@ import kotlinx.android.synthetic.main.fragment_view_pager.*
 
 class FirstScreen : Fragment() {
     private var _binding: FragmentFirstScreenBinding? = null
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -26,7 +24,6 @@ class FirstScreen : Fragment() {
     ): View? {
         _binding = FragmentFirstScreenBinding.inflate(inflater, container, false)
 
-        //binding.name.text = viewModel.name
         binding.buttonNext1.setOnClickListener {
             val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)
             viewPager?.currentItem = 1
@@ -35,26 +32,4 @@ class FirstScreen : Fragment() {
         val view = binding.root
         return view
     }
-//    override fun onDestroyView() {
-//        super.onDestroyView()
-//        _binding = null
-//    }
-//    private lateinit var binding : FragmentFirstScreenBinding
-//    fun onCreate(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
-//        // Inflate the layout for this fragment
-//        //val binding = FragmentFirstScreenBinding.inflate(layoutInflater)
-//        val binding = FragmentFirstScreenBinding.inflate(inflater, container, false)
-//        //val view = inflater.inflate(R.layout.fragment_first_screen, container, false)
-//
-//        //val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)
-//
-//        binding.buttonNext1.setOnClickListener{
-//            val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)
-//            viewPager?.currentItem = 1
-//        }
-//        binding()
-//    }
 }

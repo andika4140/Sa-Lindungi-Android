@@ -7,14 +7,10 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.sa_lindungi.R
 import com.example.sa_lindungi.UI.api.response.DonasiResponseItem
 import com.example.sa_lindungi.UI.home.HomeActivity
-import com.example.sa_lindungi.UI.home.MainActivity
 import com.example.sa_lindungi.databinding.ActivityDonationBinding
 
 class DonationActivity : AppCompatActivity() {
@@ -37,11 +33,8 @@ class DonationActivity : AppCompatActivity() {
             intentToHome.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
             finish()
         }
-
         val layoutManager = LinearLayoutManager(this)
         binding.rvDonasi.layoutManager = layoutManager
-//        val itemDecoration = DividerItemDecoration(this, layoutManager.orientation)
-//        binding.rvDonasi.addItemDecoration(itemDecoration)
     }
 
     private fun setupViewModel() {

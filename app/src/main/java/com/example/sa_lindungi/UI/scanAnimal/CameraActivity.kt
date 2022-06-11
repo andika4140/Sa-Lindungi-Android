@@ -83,7 +83,6 @@ class CameraActivity : AppCompatActivity() {
                     )
                     setResult(OptionActivity.CAMERA_X_RESULT, intent)
                     finish()
-//                    Toast.makeText(this@CameraActivity, "Berhasil mengambil gambar", Toast.LENGTH_SHORT).show()
                 }
             }
         )

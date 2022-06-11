@@ -17,12 +17,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setupView()
-
-//        binding.buttonKenaliSatwa.setOnClickListener {
-//            val intentToOption = Intent(this@MainActivity, OptionActivity::class.java)
-//            startActivity(intentToOption)
-//        }
-
     }
 
     private fun setupView() {

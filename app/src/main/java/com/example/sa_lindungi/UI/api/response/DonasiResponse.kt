@@ -10,9 +10,6 @@ data class DonasiResponse(
 
 data class DonasiResponseItem(
 
-//	@field:SerializedName("createdAt")
-//	val createdAt: String? = null,
-
 	@field:SerializedName("kontak")
 	val kontak: String? = null,
 
@@ -39,7 +36,4 @@ data class DonasiResponseItem(
 
 	@field:SerializedName("logo")
 	val logo: String? = null
-
-//	@field:SerializedName("updatedAt")
-//	val updatedAt: String? = null
 )

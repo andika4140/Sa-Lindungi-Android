@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
+import com.example.sa_lindungi.R
 import com.example.sa_lindungi.UI.donation.DonationActivity
+import com.example.sa_lindungi.UI.donation.transaction.DonationCheckActivity
 import com.example.sa_lindungi.UI.scanAnimal.OptionActivity
 import com.example.sa_lindungi.databinding.ActivityHomeBinding
 
@@ -33,11 +35,12 @@ class HomeActivity : AppCompatActivity() {
                 startActivity(intentToDonation)
             }
 
-//            binding.buttonCekDonasi.setOnClickListener {
-//                val intentToCheckDonation = Intent(this, DonationCheckActivity::class.java)
-//                startActivity(intentToCheckDonation)
-//            }
+            binding.buttonCekDonasi.setOnClickListener {
+                val intentToCheckDonation = Intent(this, DonationCheckActivity::class.java)
+                startActivity(intentToCheckDonation)
+            }
         }
+
     }
 
     private fun clearBackstack() {

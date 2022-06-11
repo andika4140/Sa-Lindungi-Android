@@ -3,7 +3,6 @@ package com.example.sa_lindungi.UI.donation
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.sa_lindungi.R
@@ -38,6 +37,7 @@ class DonationAdapter(private val listDonation: ArrayList<DonasiResponseItem>) :
                 binding.tvDonasi.text = data.nama
                 binding.cardView.setOnClickListener {
                     val intentToDetail = Intent(itemView.context, DonationDetailActivity::class.java)
+                    intentToDetail.putExtra(DonationDetailActivity.EXTRA_ID, data.id)
                     intentToDetail.putExtra(DonationDetailActivity.EXTRA_NAMA, data.nama)
                     intentToDetail.putExtra(DonationDetailActivity.EXTRA_DESKRIPSI,data.deskripsi)
                     intentToDetail.putExtra(DonationDetailActivity.EXTRA_KONTAK, data.kontak)
@@ -46,7 +46,6 @@ class DonationAdapter(private val listDonation: ArrayList<DonasiResponseItem>) :
                     intentToDetail.putExtra(DonationDetailActivity.EXTRA_WEBSITE, data.website)
                     intentToDetail.putExtra(DonationDetailActivity.EXTRA_GAMBAR, data.gambar)
                     itemView.context.startActivity(intentToDetail)
-//                    Toast.makeText(itemView.context, data.nama, Toast.LENGTH_SHORT).show()
                 }
             }
     }
